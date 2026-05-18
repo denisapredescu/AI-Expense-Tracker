@@ -1,0 +1,15 @@
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\bin\Debug\net8.0\Expense Tracker.Modals.deps.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\bin\Debug\net8.0\Expense Tracker.Modals.runtimeconfig.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\bin\Debug\net8.0\Expense Tracker.Modals.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\bin\Debug\net8.0\Expense Tracker.Modals.pdb
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.csproj.AssemblyReference.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.AssemblyInfoInputs.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.AssemblyInfo.cs
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.csproj.CoreCompileInputs.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.sourcelink.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\refint\Expense Tracker.Modals.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.pdb
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\Expense Tracker.Modals.genruntimeconfig.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.Modals\obj\Debug\net8.0\ref\Expense Tracker.Modals.dll
