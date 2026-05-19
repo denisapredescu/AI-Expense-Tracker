@@ -8,9 +8,15 @@ const routes: Routes = [
     component: AuthComponent,
   },
   {
-    path: 'auth',
+    path: 'register',
     component: AuthComponent,
-  }
+    data: { formType: 'register' }
+  },
+  {
+    path: 'login',
+    component: AuthComponent,
+    data: { formType: 'login' }
+  },
 ];
 
 @NgModule({

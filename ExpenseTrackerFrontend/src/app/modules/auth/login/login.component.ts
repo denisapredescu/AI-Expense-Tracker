@@ -61,14 +61,14 @@ submitLogin() {
 
         }, 
     (error) =>{
-      this.error = "Unable to login user! Please try again!"; 
+      this.error = "Unable to login user! Please try again! Error message:" + error.error 
       console.error(error);
-      alert("Unable to login user! Please try again! Error:" + error.message);
+      // alert("Unable to login user! Please try again! Error:" + error.error);
     }
     );
     }
     else{
-      this.error = "Email or password is not valid!";
+      this.error = "Invalid email or password!";
     }
 
   }

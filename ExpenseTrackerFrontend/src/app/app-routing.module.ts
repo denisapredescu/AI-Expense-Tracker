@@ -31,17 +31,20 @@ const routes: Routes = [
 
   {
     path: 'auth',
-    loadChildren: () => import('src/app/modules/auth/auth.module').then(m => m.AuthModule),
+   // loadChildren: () => import('src/app/modules/auth/auth.module').then(m => m.AuthModule),
+  loadChildren: () =>
+  import('./modules/auth/auth.module').then(m => m.AuthModule)
+  
   },
   // {
   //   path: 'dashboard',
   //   loadChildren: () => import('src/app/modules/dashboard.module').then(m => m.DashboardModule),
   // },
-  {
-    path: 'dashboard/:email',
-    canActivate: [AuthGuard],
-    component: DashboardComponent
-  },
+  // {
+  //   path: 'dashboard/:email',
+  //   canActivate: [AuthGuard],
+  //   component: DashboardComponent
+  // },
 
 
   // fallback

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedDataService } from 'src/app/services/shared-data.service';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 })
 
 export class NavmenuComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+        private sharedDataService: SharedDataService) {}
 
   collapsed = false;
 
@@ -18,7 +20,10 @@ export class NavmenuComponent {
   }
 
   logout() {
-    localStorage.removeItem('token');
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('Role');
+    this.sharedDataService.changeUserData('');
+          
     this.router.navigate(['/auth/login']);
   }
 }

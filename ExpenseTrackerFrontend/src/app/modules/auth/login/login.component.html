@@ -37,3 +37,11 @@
   </button>
 
 </form>
+
+<div class="register-link">
+  <p>Don't have an account? <a routerLink="/auth/register">Register here</a></p>
+</div>
+
+<div *ngIf="error" class="error-container">
+ <p>{{ error }}</p>
+</div>

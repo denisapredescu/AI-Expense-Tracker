@@ -46,3 +46,11 @@
             <button type="submit"  class="submit-btn" [disabled]="registerFormRef.invalid">Register</button>
           <!-- <button type="submit" class="submit-btn" (click)="submitRegister()">Register</button> -->
         </form>
+
+        <div class="register-link">
+  <p>Already have an account? <a routerLink="/auth/login">Login here</a></p>
+</div>
+
+<div *ngIf="error" class="error-container">
+ <p>{{ error }}</p>
+</div>

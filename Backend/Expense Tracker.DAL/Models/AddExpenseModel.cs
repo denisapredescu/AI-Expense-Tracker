@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Expense_Tracker.DAL.IRepositories
+namespace Expense_Tracker.DAL.Models
 {
-    public interface IUserRepository
+    internal class AddExpenseModel
     {
     }
 }
