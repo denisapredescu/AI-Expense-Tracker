@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Expense_Tracker.BLL.IServices
 {
-    internal interface IBudgetService
+    public interface IBudgetService
     {
     }
 }

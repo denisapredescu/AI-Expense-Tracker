@@ -1,5 +1,53 @@
 [
   {
+    "ContainingType": "Expense_Tracker.API.Controllers.AiController",
+    "Method": "Extract",
+    "RelativePath": "api/Ai/extract",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Expense_Tracker.DAL.Models.ExtractRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
+    "Method": "DeleteExpense",
+    "RelativePath": "Expense/DeleteExpense",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expenseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
+    "Method": "GetExpenseByUser",
+    "RelativePath": "Expense/GetExpenseByUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Expense_Tracker.API.Controllers.UserController",
     "Method": "Login",
     "RelativePath": "User/Login",

@@ -55,12 +55,19 @@ namespace Expense_Tracker.API
             //acum avem baza de date legata la aplicatia noastra
 
             //transient creeaza o noua instanta cand se doreste o injectare
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ICategoryService, CategoryService>();
 
-            //services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IExpenseRepository, ExpenseRepository>();
+            services.AddTransient<IExpenseService, ExpenseService>();
+
+            services.AddTransient<IBudgetRepository, BudgetRepository>();
+            services.AddTransient<IBudgetService, BudgetService>();
+
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ITokenHelper, TokenHelper>();
 
-
+            services.AddHttpClient<GeminiService>();
 
             services.AddControllers().AddJsonOptions(x =>
                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve); //pentru a afisa frumos fara a face modele

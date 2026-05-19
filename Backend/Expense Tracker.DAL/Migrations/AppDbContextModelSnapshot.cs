@@ -88,12 +88,20 @@ namespace Expense_Tracker.DAL.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<bool>("IsRecurring")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Merchant")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PaymentDate")
                         .IsRequired()

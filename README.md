@@ -4,6 +4,8 @@ AI Expense Tracker is a personal project developed in .NET and Angular with AI-i
 AI Integrated for Extracting the expenses from description:
 Use a local AI model with Ollama
 
+![alt text](image.png)
+
 This runs AI directly on your PC.
 
 No API cost.
