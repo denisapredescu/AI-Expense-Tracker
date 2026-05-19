@@ -8,58 +8,30 @@ C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Trac
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Expense Tracker.API.pdb
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.csproj.AssemblyReference.cache
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.AssemblyInfoInputs.cache
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.AssemblyInfo.cs
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.csproj.CoreCompileInputs.cache
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.sourcelink.json
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\scopedcss\bundle\Expense Tracker.API.styles.css
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense .71FB55FF.Up2Date
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\refint\Expense Tracker.API.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.pdb
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.genruntimeconfig.cache
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\ref\Expense Tracker.API.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Humanizer.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
@@ -67,44 +39,36 @@ C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Trac
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.ClientModel.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Drawing.Common.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Memory.Data.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Runtime.Caching.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Windows.Extensions.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Humanizer.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Composition.Convention.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Composition.Hosting.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -157,5 +121,54 @@ C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Trac
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Expense Tracker.DAL.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Expense Tracker.DAL.pdb
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.csproj.AssemblyReference.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.AssemblyInfoInputs.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.AssemblyInfo.cs
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.csproj.CoreCompileInputs.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.sourcelink.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\scopedcss\bundle\Expense Tracker.API.styles.css
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense .71FB55FF.Up2Date
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\refint\Expense Tracker.API.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.pdb
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.genruntimeconfig.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\ref\Expense Tracker.API.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Expense Tracker.BLL.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Expense Tracker.BLL.pdb
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.API\obj\Debug\net8.0\Expense Tracker.API.MvcApplicationPartsAssemblyInfo.cs

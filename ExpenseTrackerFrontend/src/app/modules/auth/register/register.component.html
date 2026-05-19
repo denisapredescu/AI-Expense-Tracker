@@ -1,0 +1,48 @@
+
+      <!-- REGISTER -->
+        <form #registerFormRef="ngForm"  (ngSubmit)="submitRegister()"  class="form active">
+          <h3>Create Account</h3>
+
+         <!-- EMAIL -->
+  <div class="input-group">
+    <label>Email</label>
+    <input
+      name="email"
+      type="email"
+      [(ngModel)]="registerForm.email"
+      placeholder="Add a valid email address"
+      required
+      email
+      #regEmail="ngModel">
+
+    <div *ngIf="regEmail.invalid && (regEmail.dirty || regEmail.touched)" style="color:crimson">
+        <small *ngIf="regEmail.errors && regEmail.errors['required']">Email is required.</small>
+      <small *ngIf=" regEmail.errors?.['email']">
+  Email must be valid.
+</small>
+    </div>
+  </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input name="password" type="password" placeholder="Create a password" [(ngModel)]="registerForm.password" required minlength="6"  #regPassword="ngModel">
+            <div *ngIf="regPassword.invalid && (regPassword.dirty || regPassword.touched)" style="color:crimson">
+        <small *ngIf="regPassword.errors && regPassword.errors['required']">Password is required.</small>
+        <small *ngIf="regPassword.errors && regPassword.errors['minlength']">Password must be at least 6 characters.</small>
+      </div>
+        </div>
+
+          <div class="input-group">
+            <label>Confirm Password</label>
+            <input name="confirmPassword" type="password" placeholder="Confirm password" [(ngModel)]="registerForm.confirmPassword" required #regConfirmPassword="ngModel">
+            <div *ngIf="(regConfirmPassword.dirty || regConfirmPassword.touched)" style="color:crimson">
+        <small *ngIf="regConfirmPassword.errors && regConfirmPassword.errors['required']">Confirm Password is required.</small>
+     <small *ngIf="!passwordsMatch()">
+  Passwords do not match.
+</small>
+      </div>
+          </div>
+
+            <button type="submit"  class="submit-btn" [disabled]="registerFormRef.invalid">Register</button>
+          <!-- <button type="submit" class="submit-btn" (click)="submitRegister()">Register</button> -->
+        </form>

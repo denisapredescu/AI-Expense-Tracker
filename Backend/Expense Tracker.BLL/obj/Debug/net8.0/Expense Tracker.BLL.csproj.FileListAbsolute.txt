@@ -10,3 +10,7 @@ C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Trac
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.BLL\obj\Debug\net8.0\refint\Expense Tracker.BLL.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.BLL\obj\Debug\net8.0\Expense Tracker.BLL.pdb
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.BLL\obj\Debug\net8.0\ref\Expense Tracker.BLL.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.BLL\obj\Debug\net8.0\Expense Tracker.BLL.csproj.AssemblyReference.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.BLL\bin\Debug\net8.0\Expense Tracker.DAL.dll
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.BLL\bin\Debug\net8.0\Expense Tracker.DAL.pdb
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.BLL\obj\Debug\net8.0\Expense .146814A7.Up2Date

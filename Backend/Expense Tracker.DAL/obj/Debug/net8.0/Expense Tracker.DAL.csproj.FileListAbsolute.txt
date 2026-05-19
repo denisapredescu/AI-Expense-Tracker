@@ -1,6 +1,8 @@
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\bin\Debug\net8.0\Expense Tracker.DAL.deps.json
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\bin\Debug\net8.0\Expense Tracker.DAL.runtimeconfig.json
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\bin\Debug\net8.0\Expense Tracker.DAL.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\bin\Debug\net8.0\Expense Tracker.DAL.pdb
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\Expense Tracker.DAL.csproj.AssemblyReference.cache
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\Expense Tracker.DAL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\Expense Tracker.DAL.AssemblyInfoInputs.cache
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\Expense Tracker.DAL.AssemblyInfo.cs
@@ -9,7 +11,5 @@ C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Trac
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\Expense Tracker.DAL.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\refint\Expense Tracker.DAL.dll
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\Expense Tracker.DAL.pdb
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\ref\Expense Tracker.DAL.dll
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\Expense Tracker.DAL.csproj.AssemblyReference.cache
-C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\bin\Debug\net8.0\Expense Tracker.DAL.runtimeconfig.json
 C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\Expense Tracker.DAL.genruntimeconfig.cache
+C:\Users\denis\OneDrive\Documents\GitHub\AI-Expense-Tracker\Backend\Expense Tracker.DAL\obj\Debug\net8.0\ref\Expense Tracker.DAL.dll

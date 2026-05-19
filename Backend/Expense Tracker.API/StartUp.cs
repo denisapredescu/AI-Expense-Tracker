@@ -1,5 +1,9 @@
-﻿using Expense_Tracker.DAL;
+﻿using Expense_Tracker.BLL.IServices;
+using Expense_Tracker.BLL.Services;
+using Expense_Tracker.DAL;
 using Expense_Tracker.DAL.Entities;
+using Expense_Tracker.DAL.IRepositories;
+using Expense_Tracker.DAL.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -50,13 +54,21 @@ namespace Expense_Tracker.API
         b => b.MigrationsAssembly("Expense Tracker.DAL")));
             //acum avem baza de date legata la aplicatia noastra
 
+            //transient creeaza o noua instanta cand se doreste o injectare
+
+            //services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ITokenHelper, TokenHelper>();
+
+
+
             services.AddControllers().AddJsonOptions(x =>
                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve); //pentru a afisa frumos fara a face modele
 
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Library", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Expense Tracker", Version = "v1" });
             });
 
             // identity
@@ -104,16 +116,20 @@ namespace Expense_Tracker.API
                 opt.AddPolicy("User", policy => policy.RequireRole("User").RequireAuthenticatedUser().AddAuthenticationSchemes("AuthScheme").Build());
             });
 
-
+            services.AddTransient<InitialSeed>();    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)  //spun si aici ca ii ofer un serviciu
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, InitialSeed initialSeed)  //spun si aici ca ii ofer un serviciu
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Expense Tracker v1");
+                });
             }
 
             app.UseHttpsRedirection();
@@ -121,6 +137,7 @@ namespace Expense_Tracker.API
             app.UseRouting();
 
             app.UseCors(SpecificOrigins);
+           
 
             app.UseAuthorization();
 
@@ -129,7 +146,7 @@ namespace Expense_Tracker.API
                 endpoints.MapControllers();
             });
 
-            //initialSeed.CreateRoles();      //daca aceste roluri exista, la urmatorul run nu le va mai crea
+            initialSeed.CreateRoles();      //daca aceste roluri exista, la urmatorul run nu le va mai crea
         }
     }
     }

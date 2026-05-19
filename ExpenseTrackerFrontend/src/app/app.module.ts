@@ -25,6 +25,7 @@ import { StatisticsCardComponent } from './modules/statistics-card/statistics-ca
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 
 
 
@@ -57,7 +58,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   MatFormFieldModule,
   MatInputModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

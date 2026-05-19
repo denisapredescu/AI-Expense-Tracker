@@ -1,1 +1,27 @@
-<p>auth works!</p>
+ <div class="whole-page"> <div class="container">
+
+    <div class="left-panel">
+      <h1>Expense Tracker</h1>
+      <p>
+        Manage your expenses, track your budget,
+        and stay financially organized with a clean and modern experience.
+      </p>
+    </div>
+
+    <div class="right-panel">
+      <div class="form-container">
+
+        <div class="tabs">
+          <button type="button"  class="tab-btn" [class]="{'active': displayLogin}" (click)="showLogin()">Login</button>
+          <button type="button"  class="tab-btn" [class]="{'active': !displayLogin}" (click)="showRegister()">Register</button>
+        </div>
+
+        <app-login *ngIf="displayLogin"></app-login>
+        <app-register *ngIf="!displayLogin"></app-register>
+      
+  
+
+      </div>
+    </div>
+  </div>
+ </div>

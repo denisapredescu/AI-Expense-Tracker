@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
-    //  canActivate: [AuthGuard],
+     canActivate: [AuthGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'expenses', component: ExpensesComponent },
@@ -21,13 +21,13 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   },
-  {
-    path: 'auth',
-    children: [
-      { path: 'login', component: AuthComponent },
-      { path: 'register', component: AuthComponent },
-    ]
-  },
+  // {
+  //   path: 'auth',
+  //   children: [
+  //     { path: 'login', component: AuthComponent },
+  //     { path: 'register', component: AuthComponent },
+  //   ]
+  // },
 
   {
     path: 'auth',

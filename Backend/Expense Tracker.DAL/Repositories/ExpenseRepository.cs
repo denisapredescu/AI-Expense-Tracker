@@ -40,9 +40,9 @@ namespace Expense_Tracker.DAL.Repositories
                 return _context.Expenses.Where(e => e.Id == id);
             }
     
-            public IQueryable<IEnumerable<Expense>> GetExpensesByUserEmail(string userEmail)
+            public IQueryable<Expense> GetExpensesByUserEmail(string userEmail)
             {
-                return _context.Expenses.Where(e => e.UserEmail == userEmail).GroupBy(e => new { e.PaymentDate.Substring(0, 7) }).Select(g => g.AsEnumerable());
+            return _context.Expenses.Where(e => e.UserEmail == userEmail); //.GroupBy(e => new { e.PaymentDate.Substring(0, 7) }).Select(g => g.AsEnumerable());
         }
     }
 }
