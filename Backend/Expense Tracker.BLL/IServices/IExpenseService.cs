@@ -1,4 +1,5 @@
 ﻿using Expense_Tracker.DAL.Entities;
+using Expense_Tracker.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,12 @@ namespace Expense_Tracker.BLL.IServices
 {
     public interface IExpenseService
     {
-        //Task<String> AddExpense(AddExpenseModel addExpenseModel);
-        //Task<String> UpdateExpense(UpdateExpenseModel updateExpenseModel);
-        Task<String> DeleteExpense(int expenseId);
-        Task<List<Expense>> GetExpenseByUser(String userEmail);
+        Task<List<Expense>> UpdateExpense(Expense expenseModel);
+        Task<List<Expense>> DeleteExpense(int budgetId);
+        Task<Expense> GetExpenseById(int id);
+        Task<List<Expense>> GetExpensesByUser(string userEmail);
+        Task<List<Expense>> CreateExpense(Expense expenseModel);
+        Task<List<Expense>> SaveAllExpenses(List<Expense> expenses, string userEmail);
     }
+
 }

@@ -29,12 +29,20 @@
         </div>
     </a>
 
-    <a mat-list-item routerLink="/expenses" routerLinkActive="active-link">
+    <a mat-list-item routerLink="/expenses" routerLinkActive="active-link"
+  [routerLinkActiveOptions]="{ exact: true }">
         <div class="menu-item"> 
             <mat-icon>payments</mat-icon>
             <span>Expenses</span>
         </div>
     </a>
+
+    <!-- <a mat-list-item routerLink="/expenses/new" routerLinkActive="active-link">
+        <div class="menu-item"> 
+            <mat-icon>add</mat-icon>
+            <span>New Expense</span>
+        </div>
+    </a> -->
 
     <a mat-list-item routerLink="/budgets" routerLinkActive="active-link">
         <div class="menu-item"> 

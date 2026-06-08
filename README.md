@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+PM> Add-Migration "Removed Category foreign key from Budget Table" -context 'Expense Tracker.DAL' -project 'Expense Tracker.API'
+PM> Update-Database
+
+
 # AI Expense Tracker
 AI Expense Tracker is a personal project developed in .NET and Angular with AI-integrated components
 

@@ -18,10 +18,12 @@ namespace Expense_Tracker.DAL.Entities
         //- Year
         public int Id { get; set; }
         public decimal MonthlyLimit { get; set; }
-        public int? CategoryId { get; set; }
-        public virtual Category Category { get; set; }
-        public int Month { get; set; }
-        public int Year { get; set; }
+        //public int? CategoryId { get; set; }
+        //public virtual Category Category { get; set; }
+        //public int Month { get; set; }
+        //public int Year { get; set; }
+
+        public DateTime BudgetMonth { get; set; }
         public string UserEmail { get; set; }
     }
 }

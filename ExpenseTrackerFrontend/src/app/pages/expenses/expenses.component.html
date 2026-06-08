@@ -1,0 +1,232 @@
+  <!-- <div
+    class="expenses-page"
+    [ngClass]="{ 'display-new-section': newSectionIsOpen }"
+    [ngClass]="{ 'hide-new-section': !newSectionIsOpen }"
+  >
+    <div class="new-expense-section" *ngIf="newSectionIsOpen">
+      <div class="close-new-section">
+        <p><i>Click the icon to close the new expense section</i></p>
+        <mat-icon class="closed-icon" (click)="newSectionIsOpen = false"
+          >close</mat-icon
+        >
+      </div>
+      <app-new-expense
+        [categories]="categories"
+        [expenses]="expenses"
+        (changeExpenses)="updateExpenses($event)"
+      ></app-new-expense>
+    </div>
+
+    <div class="closed-new-section" *ngIf="!newSectionIsOpen">
+      <mat-icon class="closed-icon" (click)="newSectionIsOpen = true"
+        >add_circle</mat-icon
+      >
+      <p class="new-expense-text"><i>Click the icon to add a new expense</i></p>
+    </div>
+
+    <div>
+      <div class="topbar">
+        <div class="title-section">
+          <h2>Expenses</h2>
+          <p><i>Manage and review your transactions</i></p>
+        </div>
+
+        <div class="filters">
+          <mat-form-field appearance="outline" class="filter-field">
+            <mat-label>Month</mat-label>
+
+            <input
+              matInput
+              [matDatepicker]="picker"
+              [formControl]="selectedDate"
+              readonly
+              (dateChange)="setMonthAndYear($event, picker)"
+            />
+
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+
+            <mat-datepicker
+              #picker
+              startView="multi-year"
+              (monthSelected)="chosenMonthHandler($event, picker)"
+              (yearSelected)="chosenYearHandler($event)"
+            >
+            </mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="filter-field">
+            <mat-label>Category</mat-label>
+
+            <mat-select
+              [(ngModel)]="selectedCategoryId"
+              (selectionChange)="filterAndSortExpenses()"
+            >
+              <mat-option [value]="0">All Categories</mat-option>
+
+              <mat-option
+                *ngFor="let category of categories"
+                [value]="category.id"
+              >
+                {{ category.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="filter-field">
+            <mat-label>Sort By</mat-label>
+
+            <mat-select [(ngModel)]="sortBy" (selectionChange)="applySort()">
+              <mat-option value="dateDesc">Newest</mat-option>
+              <mat-option value="dateAsc">Oldest</mat-option>
+              <mat-option value="amountDesc">Highest Amount</mat-option>
+              <mat-option value="amountAsc">Lowest Amount</mat-option>
+              <mat-option value="merchantAsc">Merchant A-Z</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button
+            mat-raised-button
+            class="delete-btn"
+            (click)="resetDateSelector()"
+          >
+            <mat-icon>refresh</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="expenses.length === 0" class="empty-state">
+        <mat-icon>receipt_long</mat-icon>
+        <p>No expenses found.</p>
+      </div>
+
+      <div *ngIf="expenses.length > 0" class="expenses-grid">
+        <app-expense-form
+          *ngFor="let exp of expenses"
+          [expense]="exp"
+          [categories]="categories"
+          [actions]="{ edit: true, save: true, cancel: true, delete: true }"
+          (save)="saveExpense($event)"
+          (edit)="enableEdit($event)"
+          (cancel)="restoreExpense($event)"
+          (delete)="removeExpense($event)"
+        ></app-expense-form>
+      </div>
+      
+    </div>
+
+    
+  </div>
+
+
+<div style="height: 100px"></div> -->
+
+
+<app-entity-page-layout
+  title="Expenses"
+  subtitle="Manage and review your transactions"
+  entityName="expense"
+  [newSectionIsOpen]="newSectionIsOpen"
+  [isEmpty]="expenses.length === 0"
+  (toggleSection)="newSectionIsOpen = $event"
+>
+
+  <app-new-expense
+    new-content
+    [categories]="categories"
+    [expenses]="expenses"
+    (changeExpenses)="updateExpenses($event)">
+  </app-new-expense>
+
+  <div filters class="filters">
+    <!-- Expense filters here -->
+
+     <!-- DATE FILTER -->
+          <mat-form-field appearance="outline" class="filter-field">
+            <mat-label>Month</mat-label>
+
+            <input
+              matInput
+              [matDatepicker]="picker"
+              [formControl]="selectedDate"
+              readonly
+              (dateChange)="setMonthAndYear($event, picker)"
+            />
+
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+
+            <mat-datepicker
+              #picker
+              startView="multi-year"
+              (monthSelected)="chosenMonthHandler($event, picker)"
+              (yearSelected)="chosenYearHandler($event)"
+            >
+            </mat-datepicker>
+          </mat-form-field>
+
+          <!-- CATEGORY FILTER -->
+          <mat-form-field appearance="outline" class="filter-field">
+            <mat-label>Category</mat-label>
+
+            <mat-select
+              [(ngModel)]="selectedCategoryId"
+              (selectionChange)="filterAndSortExpenses()"
+            >
+              <mat-option [value]="0">All Categories</mat-option>
+
+              <mat-option
+                *ngFor="let category of categories"
+                [value]="category.id"
+              >
+                {{ category.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- SORT -->
+          <mat-form-field appearance="outline" class="filter-field">
+            <mat-label>Sort By</mat-label>
+
+            <mat-select [(ngModel)]="sortBy" (selectionChange)="applySort()">
+              <mat-option value="dateDesc">Newest</mat-option>
+              <mat-option value="dateAsc">Oldest</mat-option>
+              <mat-option value="amountDesc">Highest Amount</mat-option>
+              <mat-option value="amountAsc">Lowest Amount</mat-option>
+              <mat-option value="merchantAsc">Merchant A-Z</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- RESET -->
+          <button
+            mat-raised-button
+            class="delete-btn"
+            (click)="resetDateSelector()"
+          >
+            <mat-icon>refresh</mat-icon>
+          </button>
+  </div>
+
+  <ng-container content>
+    <app-expense-form
+      *ngFor="let exp of expenses"
+      [expense]="exp"
+      [categories]="categories"
+      [actions]="{
+        edit: true,
+        save: true,
+        cancel: true,
+        delete: true
+      }"
+      (save)="saveExpense($event)"
+      (edit)="enableEdit($event)"
+      (cancel)="restoreExpense($event)"
+      (delete)="removeExpense($event)">
+    </app-expense-form>
+  </ng-container>
+
+</app-entity-page-layout>

@@ -1,0 +1,325 @@
+.new-expense-page {
+  // min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.title-section h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.title-section p {
+  margin-top: 6px;
+  color: #777;
+}
+
+
+/* HEADER */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.page-header p {
+  margin-top: 8px;
+  color: #666;
+}
+
+.back-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+/* MODE SELECTOR */
+.mode-selector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.mode-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: white;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.mode-btn.active {
+  transform: scale(1.03);
+  background-color: rgb(177, 175, 175)
+}
+
+
+/* CARD */
+.content-card {
+  // background: white;
+  background: rgb(29, 28, 28);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.06);
+  transition: 0.2s;
+
+
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
+  margin: 0;
+}
+
+.section-title p {
+  color: #777;
+  margin-top: 8px;
+}
+
+
+/* FORM */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.input-group textarea {
+  resize: none;
+}
+
+.full-width {
+  margin-top: 20px;
+}
+
+
+/* ACTIONS */
+.actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.primary-btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.secondary-btn {
+  border: 1px solid #ccc;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+}
+
+
+/* AI PLACEHOLDER */
+.ai-placeholder {
+  margin-top: 20px;
+  min-height: 300px;
+  border: 2px dashed #ccc;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+}
+
+
+.expense-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.ai-container {
+  // max-width: 900px;
+  margin: 30px auto;
+  // font-family: Arial, sans-serif;
+}
+
+/* INPUT CARD */
+.input-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  resize: none;
+}
+
+.extract-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* EXPENSE LIST */
+.expenses-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* CARD */
+.expense-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* ROWS */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input, select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTONS */
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.save-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.expense-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.row input,
+.row select {
+  flex: 1;
+  padding: 8px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background: green;
+  color: white;
+}
+
+.edit-btn {
+  background: orange;
+  color: white;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+}
+
+.error-message {
+  margin-top: 15px;
+  color: #ef4444;
+  font-weight: 600;
+}

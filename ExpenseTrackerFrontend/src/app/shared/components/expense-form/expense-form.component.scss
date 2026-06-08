@@ -1,0 +1,267 @@
+.expense-card {
+  //   background: rgb(29, 28, 28);
+  //   border-radius: 20px;
+  //   padding: 22px;
+  //   box-shadow:
+  //     0 4px 20px rgba(0,0,0,0.06);
+  //   transition: 0.2s;
+
+  background: rgb(69 69 69);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 15px rgba(256, 256, 256, 0.1);
+  transition: 0.2s;
+
+}
+
+.on-list {
+  display: grid;
+  grid-template-columns: calc(100% - 100px) 80px;
+  gap: 20px;
+      justify-items: stretch;
+    align-items: center;
+}
+
+.expense-card:hover {
+  transform: translateY(-3px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.merchant {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 22px;
+  font-weight: bold;
+  color: #b81172;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.row mat-form-field {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.buttons {
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   gap: 10px;
+  //   margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+      flex-direction: column;
+    align-items: center;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+mat-icon:hover {
+  color: #4f46e5;
+}
+
+// }
+
+
+
+.readonly {
+  pointer-events: none;
+  /* prevents opening dropdown */
+  color: white;
+  /* keeps it clean */
+  opacity: 1 !important;
+  /* removes grey fade */
+  border-color: white !important;
+  /* removes grey border */
+
+}
+
+.readonly .mat-mdc-select-trigger {
+  color: black !important;
+}
+
+.save-btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+// ::ng-deep .mat-mdc-form-field {
+//   font-size: 13px;
+// }
+
+// ::ng-deep .mat-mdc-form-field-flex {
+//   font-size: 13px !important;
+//   height: 50px;
+//     align-items: center !important;
+// }
+
+// ::ng-deep .mat-mdc-text-field-wrapper {
+// //   padding-top: 2px !important;
+// //   padding-bottom:  2px !important;
+//   font-size:13px;
+// }
+
+// ::ng-deep .mat-mdc-form-field-infix {
+//   min-height: 36px;
+// }
+
+// input,
+// textarea {
+//   font-size: 13px;
+// }
+
+// Source - https://stackoverflow.com/a/54762506
+// Posted by Akber Iqbal, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-06-01, License - CC BY-SA 4.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .expense-card {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   padding: 14px 16px;
+//   border-radius: 14px;
+//   background: #ffffff;
+
+//   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+//   transition: all 0.2s ease;
+
+//   margin-bottom: 10px;
+// }
+
+// .expense-card:hover {
+//   transform: translateY(-2px);
+//   box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+// }
+
+/* LEFT SIDE */
+.expense-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP ROW */
+.expense-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* MERCHANT BLOCK */
+.merchant-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.merchant {
+  font-size: 16px;
+  font-weight: 600;
+  // color: #1f1f1f;
+}
+
+/* META LINE */
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #afb3bb;
+}
+
+/* CATEGORY PILL */
+.pill {
+  background: #e9e8e8;
+  color: #4f46e5;
+  padding: 3px 8px;
+  border-radius: 999px;
+  // font-size: 11px;
+  font-weight: 700;
+}
+
+/* DOT SEPARATOR */
+.dot {
+  opacity: 0.5;
+}
+
+/* AMOUNT */
+.amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #dc2626; /* default expense red */
+  white-space: nowrap;
+}
+
+.amount.income {
+  color: #fa1414; /* green for income */
+}
+
+/* ACTIONS */
+.expense-actions {
+  display: flex;
+  gap: 4px;
+  margin-left: 10px;
+}

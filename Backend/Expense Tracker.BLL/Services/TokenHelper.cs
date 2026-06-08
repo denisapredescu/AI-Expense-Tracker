@@ -47,7 +47,7 @@ namespace Expense_Tracker.BLL.Services
 
             //dupa login primim un AccesToken
 
-            var secret = _configuration.GetSection("Jwt").GetSection("Token").Get<String>();
+            var secret = _configuration.GetSection("Jwt").GetSection("Token").Get<string>();
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
 

@@ -1,0 +1,276 @@
+<div class="expense-card" [ngClass]="{ 'on-list': !isNewForm()}">
+  
+  <!-- {{isNewForm() ? 'New Item' : 'Edit Item'}} -->
+  <div  *ngIf="expense.isEditing">
+    <!-- CARD HEADER -->
+    <div class="card-header" *ngIf="!isNewForm()">
+
+      <div class="merchant">
+        {{ expense.merchant || 'Unknown Merchant' }}
+      </div>
+
+      <div class="amount">
+        - {{ expense.amount }} {{ expense.currency || 'LEI' }}
+      </div>
+
+    </div>
+
+    <!-- CATEGORY + DATE -->
+    <div class="row">
+
+      <mat-form-field appearance="outline"  density="compact" [class.readonly]="!expense.isEditing">
+
+        <mat-label>Category</mat-label>
+        <mat-select [(ngModel)]="expense.categoryId" [class.readonly]="!expense.isEditing">
+
+          <mat-option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </mat-option>
+
+        </mat-select>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline"  density="compact" [class.readonly]="!expense.isEditing">
+
+        <mat-label>Amount</mat-label>
+
+        <input matInput type="number" placeholder="0.00" [(ngModel)]="expense.amount"
+          [class.readonly]="!expense.isEditing" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline"  density="compact" [class.readonly]="!expense.isEditing">
+
+        <mat-label>Payment Date</mat-label>
+
+        <input matInput [(ngModel)]="expense.paymentDate" [matDatepicker]="picker"
+          [class.readonly]="!expense.isEditing" />
+
+
+        <mat-datepicker-toggle matSuffix [for]="picker" [class.readonly]="!expense.isEditing"></mat-datepicker-toggle>
+
+        <mat-datepicker #picker [class.readonly]="!expense.isEditing"></mat-datepicker>
+
+      </mat-form-field>
+
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="row">
+
+
+      <mat-form-field appearance="outline" [class.readonly]="!expense.isEditing">
+        <mat-label>Merchant</mat-label>
+        <input matInput [(ngModel)]="expense.merchant" [class.readonly]="!expense.isEditing">
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" [class.readonly]="!expense.isEditing">
+
+        <mat-label>Payment Method</mat-label>
+
+        <mat-select [(ngModel)]="expense.paymentMethod" [class.readonly]="!expense.isEditing">
+          <mat-option value="Cash">Cash</mat-option>
+          <mat-option value="Card">Card</mat-option>
+        </mat-select>
+
+      </mat-form-field>
+
+
+
+
+      <mat-form-field appearance="outline" [class.readonly]="true">
+        <mat-label>Currency</mat-label>
+        <mat-select [(ngModel)]="expense.currency" [class.readonly]="true">
+          <mat-option value="LEI">LEI</mat-option>
+          <mat-option value="EUR">EUR</mat-option>
+          <mat-option value="USD">USD</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+
+    <!-- DESCRIPTION -->
+    <mat-form-field appearance="outline" class="full-width" [class.readonly]="!expense.isEditing">
+
+      <mat-label>Description</mat-label>
+
+      <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10"
+        placeholder="Short description..." [(ngModel)]="expense.description" [readonly]="!expense.isEditing"
+        [class.readonly]="!expense.isEditing"></textarea>
+
+    </mat-form-field>
+
+
+  </div>
+
+   <!-- <div  *ngIf="budget && expense === undefined">
+  
+    <div class="row">
+      <mat-form-field appearance="outline"   density="compact" [class.readonly]="!budget.isEditing">
+
+        <mat-label>Amount</mat-label>
+
+        <input matInput type="number" placeholder="0.00" [(ngModel)]="budget.monthlyLimit"
+          [class.readonly]="!budget.isEditing" />
+      </mat-form-field>
+
+
+
+      <mat-form-field appearance="outline"  density="compact" [class.readonly]="!budget.isEditing">
+
+          <mat-label>Budget Month</mat-label>
+
+          <input
+              matInput
+          [matDatepicker]="picker"
+          [(ngModel)]="budget.budgetMonth"
+         [class.readonly]="!budget.isEditing"
+          (dateChange)="setMonthAndYear($event, picker)">
+
+          
+
+          <mat-datepicker-toggle matSuffix [for]="picker" [class.readonly]="!budget.isEditing"></mat-datepicker-toggle>
+
+          <mat-datepicker
+            #picker
+            startView="multi-year"
+            [class.readonly]="!budget.isEditing"
+            (monthSelected)="chosenMonthHandler($event, picker)"
+            (yearSelected)="chosenYearHandler($event)">
+          </mat-datepicker>
+
+        </mat-form-field>
+
+    </div>
+
+   
+
+  </div> -->
+ 
+ <div *ngIf="!expense.isEditing">
+
+   <!-- LEFT CONTENT -->
+  <div class="expense-main">
+
+    <!-- Top row: merchant + amount -->
+    <div class="expense-top">
+
+      <div class="merchant-info">
+        <div class="merchant">
+          {{ expense.merchant }}
+        </div>
+
+        <div class="meta">
+          <span class="pill">{{ expense.category?.name }}</span>
+          <span class="dot">•</span>
+          <span>{{ expense.paymentMethod }}</span>
+          <span class="dot">•</span>
+          <span>{{ expense.paymentDate | date:'dd MMM yyyy' }}</span>
+        </div>
+
+         <div class="meta">
+          
+          <span><i>{{ expense.description }}</i></span>
+        </div>
+      </div>
+
+         
+      
+
+      <div class="amount" [class.income]="expense.amount > 0">
+        {{ "- " }}
+        {{ expense.amount }}
+        {{ expense.currency || 'LEI' }}
+      </div>
+
+    </div>
+
+      <!-- <div class="expense-actions">
+      <mat-icon  (click)="edit.emit()">edit</mat-icon>
+  
+
+      <mat-icon color="warn" (click)="delete.emit()">delete</mat-icon>
+ 
+  </div> -->
+  </div>
+
+  <!-- ACTIONS -->
+
+</div>
+ 
+ 
+  <!-- <div *ngIf="!expense.isEditing">
+
+
+       <div class="left">
+    <div class="merchant">
+      {{ expense.merchant }}
+    </div>
+
+    <div class="meta">
+      <span>{{ expense.category?.name }}</span>
+      <span class="dot">•</span>
+
+      <span>{{ expense.paymentMethod }}</span>
+      <span class="dot">•</span>
+
+      <span>{{ expense.paymentDate | date:'dd/MM/yyyy' }}</span>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="amount">
+      {{ expense.amount }} {{ expense.currency || 'LEI' }}
+    </div>
+
+    <div class="actions">
+      <button mat-icon-button (click)="edit.emit()">
+        <mat-icon>edit</mat-icon>
+      </button>
+
+      <button mat-icon-button color="warn" (click)="delete.emit()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div> -->
+
+
+  <!-- </div> -->
+  <!-- BUTTONS -->
+  <div class="buttons">
+
+    <!-- EDIT -->
+    <!-- <button *ngIf="actions.edit && !expense.isEditing" mat-stroked-button class="edit-btn" (click)="edit.emit(expense)">
+      Edit
+    </button> -->
+
+    <mat-icon *ngIf="actions.edit && !expense.isEditing" (click)="edit.emit(expense)">edit</mat-icon>
+
+    <!-- SAVE -->
+    <button *ngIf="actions.save && expense.isEditing && isNewForm()" mat-raised-button class="save-btn" (click)="save.emit(expense)">
+      Save
+    </button>
+    <mat-icon *ngIf="actions.save && expense.isEditing  && !isNewForm()"  (click)="save.emit(expense)">send</mat-icon>
+
+
+    <!-- CANCEL -->
+    <!-- <button *ngIf="actions.cancel && expense.isEditing" mat-button class="edit-btn" (click)="cancel.emit(expense)">
+      Cancel
+    </button> -->
+    <mat-icon *ngIf="actions.cancel && expense.isEditing" (click)="cancel.emit(expense)">cancel</mat-icon>
+
+
+    <!-- DELETE -->
+    <!-- <button *ngIf="actions.delete" mat-stroked-button class="delete-btn" (click)="delete.emit(expense)">
+      Delete
+    </button> -->
+
+     <mat-icon  *ngIf="actions.delete"  (click)="delete.emit(expense)">delete</mat-icon>
+
+  </div>
+
+</div>
+
+

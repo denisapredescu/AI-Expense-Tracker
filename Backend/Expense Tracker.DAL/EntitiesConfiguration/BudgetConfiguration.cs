@@ -18,9 +18,7 @@ namespace Expense_Tracker.DAL.EntitiesConfiguration
                 .IsRequired();
             builder.Property(p => p.UserEmail)
                     .IsRequired();
-            builder.Property(p => p.Month)
-                     .IsRequired();
-            builder.Property(p => p.Year)
+            builder.Property(p => p.BudgetMonth)
                      .IsRequired();
         }
     }

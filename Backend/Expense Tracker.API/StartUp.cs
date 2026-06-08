@@ -67,11 +67,15 @@ namespace Expense_Tracker.API
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ITokenHelper, TokenHelper>();
 
-            services.AddHttpClient<GeminiService>();
+            services.AddHttpClient<AIService>();
 
             services.AddControllers().AddJsonOptions(x =>
                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve); //pentru a afisa frumos fara a face modele
-
+            services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+    });
 
             services.AddSwaggerGen(c =>
             {

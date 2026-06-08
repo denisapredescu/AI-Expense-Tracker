@@ -14,7 +14,8 @@
           "Microsoft.Extensions.Configuration.Binder": "10.0.8",
           "Microsoft.Extensions.Http": "10.0.8",
           "OpenAI": "2.10.0",
-          "Swashbuckle.AspNetCore": "10.1.7"
+          "Swashbuckle.AspNetCore": "10.1.7",
+          "System.Net.Http.Json": "10.0.8"
         },
         "runtime": {
           "Expense Tracker.API.dll": {}
@@ -50,8 +51,8 @@
           "System.Diagnostics.DiagnosticSource": "10.0.8",
           "System.Memory.Data": "10.0.3",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Text.Encodings.Web": "10.0.3",
-          "System.Text.Json": "10.0.3",
+          "System.Text.Encodings.Web": "10.0.8",
+          "System.Text.Json": "10.0.8",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
@@ -68,7 +69,7 @@
           "Microsoft.Identity.Client.Extensions.Msal": "4.61.3",
           "System.Memory": "4.5.4",
           "System.Security.Cryptography.ProtectedData": "6.0.0",
-          "System.Text.Json": "10.0.3",
+          "System.Text.Json": "10.0.8",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
@@ -185,7 +186,7 @@
       "Microsoft.AspNetCore.Http.Abstractions/2.3.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "2.3.0",
-          "System.Text.Encodings.Web": "10.0.3"
+          "System.Text.Encodings.Web": "10.0.8"
         }
       },
       "Microsoft.AspNetCore.Http.Extensions/2.3.0": {
@@ -249,7 +250,7 @@
       "Microsoft.AspNetCore.WebUtilities/2.3.0": {
         "dependencies": {
           "Microsoft.Net.Http.Headers": "2.3.0",
-          "System.Text.Encodings.Web": "10.0.3"
+          "System.Text.Encodings.Web": "10.0.8"
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -430,7 +431,7 @@
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "Microsoft.CodeAnalysis.Common": "4.5.0",
           "System.Composition": "6.0.0",
-          "System.IO.Pipelines": "10.0.3",
+          "System.IO.Pipelines": "10.0.8",
           "System.Threading.Channels": "6.0.0"
         },
         "runtime": {
@@ -496,7 +497,7 @@
           "System.Security.Cryptography.Cng": "5.0.0",
           "System.Security.Principal.Windows": "5.0.0",
           "System.Text.Encoding.CodePages": "6.0.0",
-          "System.Text.Encodings.Web": "10.0.3"
+          "System.Text.Encodings.Web": "10.0.8"
         },
         "runtime": {
           "lib/net6.0/Microsoft.Data.SqlClient.dll": {
@@ -965,7 +966,7 @@
       },
       "Microsoft.OpenApi/2.4.1": {
         "dependencies": {
-          "System.Text.Json": "10.0.3"
+          "System.Text.Json": "10.0.8"
         },
         "runtime": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
@@ -1092,7 +1093,7 @@
           "Microsoft.Extensions.Logging.Abstractions": "10.0.8",
           "System.Diagnostics.DiagnosticSource": "10.0.8",
           "System.Memory.Data": "10.0.3",
-          "System.Text.Json": "10.0.3"
+          "System.Text.Json": "10.0.8"
         },
         "runtime": {
           "lib/net8.0/System.ClientModel.dll": {
@@ -1232,23 +1233,34 @@
           }
         }
       },
-      "System.IO.Pipelines/10.0.3": {
+      "System.IO.Pipelines/10.0.8": {
         "runtime": {
           "lib/net8.0/System.IO.Pipelines.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.326.7603"
+            "fileVersion": "10.0.826.23019"
           }
         }
       },
       "System.Memory/4.5.4": {},
       "System.Memory.Data/10.0.3": {
         "dependencies": {
-          "System.Text.Json": "10.0.3"
+          "System.Text.Json": "10.0.8"
         },
         "runtime": {
           "lib/net8.0/System.Memory.Data.dll": {
             "assemblyVersion": "10.0.0.3",
             "fileVersion": "10.0.326.7603"
+          }
+        }
+      },
+      "System.Net.Http.Json/10.0.8": {
+        "dependencies": {
+          "System.Text.Json": "10.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/System.Net.Http.Json.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.826.23019"
           }
         }
       },
@@ -1353,11 +1365,11 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "System.Text.Encodings.Web/10.0.3": {
+      "System.Text.Encodings.Web/10.0.8": {
         "runtime": {
           "lib/net8.0/System.Text.Encodings.Web.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.326.7603"
+            "fileVersion": "10.0.826.23019"
           }
         },
         "runtimeTargets": {
@@ -1365,19 +1377,19 @@
             "rid": "browser",
             "assetType": "runtime",
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.326.7603"
+            "fileVersion": "10.0.826.23019"
           }
         }
       },
-      "System.Text.Json/10.0.3": {
+      "System.Text.Json/10.0.8": {
         "dependencies": {
-          "System.IO.Pipelines": "10.0.3",
-          "System.Text.Encodings.Web": "10.0.3"
+          "System.IO.Pipelines": "10.0.8",
+          "System.Text.Encodings.Web": "10.0.8"
         },
         "runtime": {
           "lib/net8.0/System.Text.Json.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.326.7603"
+            "fileVersion": "10.0.826.23019"
           }
         }
       },
@@ -2138,12 +2150,12 @@
       "path": "system.identitymodel.tokens.jwt/7.1.2",
       "hashPath": "system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
     },
-    "System.IO.Pipelines/10.0.3": {
+    "System.IO.Pipelines/10.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WMxiA2jGdHnRBmoVK55YUq5VPaxW0Sg2frPtXV+urUMvpqHIga6lleV/YuryHIuGsAKVjQAjv6PrQ6IJpoLohQ==",
-      "path": "system.io.pipelines/10.0.3",
-      "hashPath": "system.io.pipelines.10.0.3.nupkg.sha512"
+      "sha512": "sha512-STVNTIVd+UrYvSo31D2tOOTs19IThdjGDN14FS3/NZb4PWsVakAg/VT4sq+JYWGP/GtazzvXwebWL6LPBAwnFQ==",
+      "path": "system.io.pipelines/10.0.8",
+      "hashPath": "system.io.pipelines.10.0.8.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",
@@ -2158,6 +2170,13 @@
       "sha512": "sha512-MaGhRfGunmrj/nHjtsi9XkhlYJ/ERGWrbA+BiSKNtGnAjc9XlG5EhAvak6VRcX5LYzPF6pBO8nJ613dTgzabig==",
       "path": "system.memory.data/10.0.3",
       "hashPath": "system.memory.data.10.0.3.nupkg.sha512"
+    },
+    "System.Net.Http.Json/10.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-66vEeOlwSm/ArLfOpeKbt+YRFPK7It9UVBhuaFxXbPwNw6wG0aCotM3VfrF79A9ZMsfjH6dSsv8lore8/4euQA==",
+      "path": "system.net.http.json/10.0.8",
+      "hashPath": "system.net.http.json.10.0.8.nupkg.sha512"
     },
     "System.Net.ServerSentEvents/10.0.2": {
       "type": "package",
@@ -2250,19 +2269,19 @@
       "path": "system.text.encoding.codepages/6.0.0",
       "hashPath": "system.text.encoding.codepages.6.0.0.nupkg.sha512"
     },
-    "System.Text.Encodings.Web/10.0.3": {
+    "System.Text.Encodings.Web/10.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-l8QNBPp92bVzl9Kw8nNtm1uYRNNhUrdulZjM4a8YK/QGNa8z9utKsC0bDoPB+Vq8LOlbD3fIyGlabtz80jT7cw==",
-      "path": "system.text.encodings.web/10.0.3",
-      "hashPath": "system.text.encodings.web.10.0.3.nupkg.sha512"
+      "sha512": "sha512-HvFIJXM/CMTRu6PBQmjukQZ/O32Vx5fOEYZs0kq0OD5s9vJQ19KHLWCVmnfh3gNC7pbYomm06tzOTgJBflr/nQ==",
+      "path": "system.text.encodings.web/10.0.8",
+      "hashPath": "system.text.encodings.web.10.0.8.nupkg.sha512"
     },
-    "System.Text.Json/10.0.3": {
+    "System.Text.Json/10.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NTUt9DL+maqbgrIYCAmeZUbX0NoXaueySyjW/bdOlFdSUDC1l51XnsbVEuj5tuad12vdq5Sviskp9uMVGgCNLw==",
-      "path": "system.text.json/10.0.3",
-      "hashPath": "system.text.json.10.0.3.nupkg.sha512"
+      "sha512": "sha512-/fysUDkD7oFGaRPoA7IaFs0wRoO3GlwlCNq2P+xWZqxLy1R4cktRSKfMjJDy9ymS4grL7IDVdt8de8L9a0z55Q==",
+      "path": "system.text.json/10.0.8",
+      "hashPath": "system.text.json.10.0.8.nupkg.sha512"
     },
     "System.Threading.Channels/6.0.0": {
       "type": "package",

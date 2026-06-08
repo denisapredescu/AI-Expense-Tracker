@@ -30,11 +30,8 @@ namespace Expense_Tracker.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Month")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("BudgetMonth")
+                        .HasColumnType("datetime2");
 
                     b.Property<decimal>("MonthlyLimit")
                         .HasColumnType("decimal(10,2)");
@@ -43,12 +40,7 @@ namespace Expense_Tracker.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Year")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
 
                     b.ToTable("Budgets");
                 });
@@ -89,18 +81,15 @@ namespace Expense_Tracker.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Currency")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(1000)");
 
-                    b.Property<bool>("IsRecurring")
+                    b.Property<bool?>("IsRecurring")
                         .HasColumnType("bit");
 
                     b.Property<string>("Merchant")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PaymentDate")
@@ -322,15 +311,6 @@ namespace Expense_Tracker.DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("Expense_Tracker.DAL.Entities.Budget", b =>
-                {
-                    b.HasOne("Expense_Tracker.DAL.Entities.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
-
-                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Expense_Tracker.DAL.Entities.Expense", b =>

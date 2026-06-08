@@ -11,12 +11,19 @@ import { BehaviorSubject } from 'rxjs';
 
 export class SharedDataService {
 
-  private emailSource =  new BehaviorSubject('none email');
+  private emailSource = new BehaviorSubject<string>(
+  localStorage.getItem('email') ?? ''
+);
   public currentEmailUser = this.emailSource.asObservable();
 
-  constructor() { }
+  constructor() {
+  console.log('SharedDataService CREATED'); }
 
   public changeUserData(email : string): void {
     this.emailSource.next(email);
+  }
+
+  public get currentEmail(): string {
+    return this.emailSource.value;
   }
 }

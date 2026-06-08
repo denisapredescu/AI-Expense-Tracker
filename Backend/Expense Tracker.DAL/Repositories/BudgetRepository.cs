@@ -17,34 +17,43 @@ namespace Expense_Tracker.DAL.Repositories
             _context = context;
         }
 
-        public async Task AddBudget(Budget budget)
+        //public async Task Create(Budget budget)
+        //{
+        //    _context.Budgets.Add(budget);
+        //    await _context.SaveChangesAsync();
+        //}
+
+        public async Task Update(Budget budget)
         {
-            _context.Budgets.Add(budget);
+            _context.Budgets.Update(budget);
             await _context.SaveChangesAsync();
         }
 
-        public Task UpdateBudget(Budget budget)
-        {
-            _context.Budgets.Update(budget);
-            return _context.SaveChangesAsync();
-        }
-
-        public async Task DeleteBudget(Budget budget)
+        public async Task Delete(Budget budget)
         {
             _context.Remove(budget);
             await _context.SaveChangesAsync();
         }
 
-        public IQueryable<Budget> GetBudgetById(int id)
+        //public IQueryable<Budget> GetBudgetById(int id)
+        //{
+        //    return _context.Budgets.Where(b => b.Id == id);
+        //}
+
+        //public IQueryable<IEnumerable<Budget>> GetBudgetsByUserEmail(string userEmail)
+        //{
+        //    return _context.Budgets.Where(b => b.UserEmail == userEmail).GroupBy(b => new { b.Month, b.Year }).Select(g => g.AsEnumerable());
+        //}
+
+        public async Task Create(Budget budget)
         {
-            return _context.Budgets.Where(b => b.Id == id);
+            await _context.Budgets.AddAsync(budget);  //adaug 
+            await _context.SaveChangesAsync();   //salvez modificarea in dbset
         }
 
-        public IQueryable<IEnumerable<Budget>> GetBudgetsByUserEmail(string userEmail)
+        public IQueryable<Budget> GetAll()
         {
-            return _context.Budgets.Where(b => b.UserEmail == userEmail).GroupBy(b => new { b.Month, b.Year }).Select(g => g.AsEnumerable());
+            return _context.Budgets;
         }
-
-        
     }
 }

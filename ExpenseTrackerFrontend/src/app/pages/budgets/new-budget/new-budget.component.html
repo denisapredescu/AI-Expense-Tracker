@@ -1,0 +1,17 @@
+<div class="new-expense-page">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <div class="title-section">
+      <h2>Add New Budget</h2>
+      <p><i>Track your spending and manage your budget effectively</i></p>
+    </div>
+  </div>
+
+
+ 
+    <app-budget-form [budget]="newBudget" 
+      [actions]="{ edit: false, save: true, cancel: false, delete: false }"
+      (save)="saveBudget($event)"></app-budget-form>
+
+</div>

@@ -9,10 +9,12 @@ namespace Expense_Tracker.DAL.IRepositories
 {
     public interface IBudgetRepository
     {
-        Task AddBudget(Budget budget);
-        IQueryable<Budget> GetBudgetById(int id);
-        IQueryable<IEnumerable<Budget>> GetBudgetsByUserEmail(string userEmail);
-        Task UpdateBudget(Budget budget);
-        Task DeleteBudget(Budget budget);
+        Task Create(Budget budget);
+        IQueryable<Budget> GetAll();
+
+        //IQueryable<Budget> GetBudgetById(int id);
+        //IQueryable<IEnumerable<Budget>> GetBudgetsByUserEmail(string userEmail);
+        Task Update(Budget budget);
+        Task Delete(Budget budget);
     }
 }

@@ -1,0 +1,278 @@
+<div
+  style="
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  "
+>
+  <div class="title-section">
+    <h2>Dashboard</h2>
+    <p><i>Here's a summary of your expenses</i></p>
+  </div>
+  <div>
+    <mat-form-field appearance="outline" style="padding: 10px">
+      <mat-label>Dashboard for a month:</mat-label>
+
+      <input
+        matInput
+        [matDatepicker]="picker"
+        [formControl]="selectedDate"
+        readonly="true"
+        (dateChange)="setMonthAndYear($event, picker)"
+      />
+
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+
+      <mat-datepicker
+        #picker
+        startView="multi-year"
+        (monthSelected)="chosenMonthHandler($event, picker)"
+        (yearSelected)="chosenYearHandler($event)"
+      >
+      </mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+
+<div
+  style="
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    justify-content: space-between;
+  "
+>
+  <app-statistics-card
+    title="Budget"
+    value="{{ monthBudget.toFixed(2) }}"
+    icon="payments"
+    color="#6c4fa4"
+  />
+  <app-statistics-card
+    title="Expenses"
+    value="{{ (totalExpense).toFixed(2) || 0 }}"
+    icon="shopping_bag_speed"
+    color="rgba(255, 99, 132, 1)"
+  />
+
+  <app-statistics-card
+    *ngIf="monthBudget - totalExpense < 0"
+    title="Savings"
+    value="{{ (monthBudget - totalExpense).toFixed(2) || 0 }}"
+    icon="savings"
+    color="#ea2314"
+  />
+
+  <app-statistics-card
+    *ngIf="monthBudget - totalExpense >= 0"
+    title="Savings"
+    value="{{ (monthBudget - totalExpense).toFixed(2) }}"
+    icon="savings"
+    color="rgba(60, 198, 14, 1)"
+  />
+
+  <app-statistics-card
+    title="Expenses Per Year"
+    value="{{ totalExpensePerYear.toFixed(2) || 0 }}"
+    icon="attach_money"
+    color="rgba(255, 205, 132, 1)"
+  />
+</div>
+
+<div
+  style="
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 59% 39%;
+    justify-content: space-between;
+  "
+>
+  <div
+    class="chart-container small-chart"
+    style="
+      border: 1px solid #ccc;
+      background-color: #3f3e3e;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 7px #ffffff;
+    "
+  >
+    <!-- OVERVIEW -->
+    <div class="overview-card">
+      <div class="card-header">
+        <h2>Expenses Overview</h2>
+
+        <button class="category-btn">By Category</button>
+      </div>
+
+      <div class="overview-content">
+        <!-- CHART -->
+        <div class="chart-wrapper">
+          <canvas
+            baseChart
+            [data]="pieChartData"
+            [options]="pieChartOptions"
+            [type]="'doughnut'"
+          >
+          </canvas>
+        </div>
+
+        <!-- LEGEND -->
+        <!-- <div class="legend">
+
+        <div
+          class="legend-item"
+          *ngFor="let expense of expensesGroupBy">
+
+          <div class="legend-left">
+
+            <span
+              class="dot"
+              [style.backgroundColor]="expense.color">
+            </span>
+
+            <p>{{ expense.category }}</p>
+
+          </div>
+
+          <span>
+            ${{ expense.amount }}
+          </span>
+
+          <span class="percent">
+            {{ expense.percent }}%
+          </span>
+
+        </div>
+
+      </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="chart-container"
+    style="
+      border: 1px solid #ccc;
+      background-color: #3f3e3e;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 7px #ffffff;
+    "
+  >
+    <!-- AI INSIGHTS -->
+    <div class="insights-card">
+      <div class="card-header">
+        <h2>🤖 AI Insights</h2>
+      </div>
+
+      <!-- MAIN INSIGHT -->
+      <div class="main-insight" *ngIf="!loadingGettingInsights">
+        <h3>
+          <strong><i>Monthly Insights</i></strong>
+        </h3>
+        <p>
+          {{ insights.monthlyInsights }}
+        </p>
+      </div>
+
+
+      <div *ngIf="loadingGettingInsights" style="    display: flex;
+    flex-direction: row;
+    justify-content: center;">
+        <mat-spinner></mat-spinner>
+      </div>
+
+      <div class="main-insight" *ngIf="!loadingGettingInsights">
+        <h3>
+          <strong><i>Compared with other months Insights</i></strong>
+        </h3>
+
+        <p>
+          {{ insights.comparedWithOtherMonths }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  style="
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    justify-content: space-between;
+    height: 300px;
+  "
+>
+  <div
+    class="chart-container small-chart"
+    style="
+      border: 1px solid #ccc;
+      background-color: #3f3e3e;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 7px #ffffff;
+    "
+  >
+    <div class="trend-card">
+      <div class="card-header">
+        <div>
+          <h2>Expenses Trend</h2>
+          <p>Your monthly spending overview</p>
+        </div>
+
+        <button class="filter-btn">
+          {{ selectedDate.value?.getFullYear() }}
+        </button>
+      </div>
+
+      <div class="trend-chart-wrapper">
+        <canvas
+          baseChart
+          [data]="trendChartData"
+          [options]="trendChartOptions"
+          [type]="'line'"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="chart-container"
+    style="
+      border: 1px solid #ccc;
+      background-color: #3f3e3e;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 7px #ffffff;
+    "
+  >
+    <div class="transactions-card">
+      <div class="card-header">
+        <h2>Latest Transactions</h2>
+
+        <a class="view-all" routerLink="/expenses"> View all </a>
+      </div>
+
+      <div
+        class="transaction-item"
+        *ngFor="let expense of sortedDescExpensesDb() | slice: 0 : 4"
+      >
+        <mat-icon>shopping_bag_speed</mat-icon>
+        <div class="meta">
+          <span class="pill">{{ expense.category?.name }}</span>
+          <span class="dot">•</span>
+          <span>{{ expense.paymentMethod }}</span>
+          <span class="dot">•</span>
+          <span>{{ expense.amount }} {{ " " }} {{ expense.currency }}</span>
+          <span class="dot">•</span>
+          <span>{{ expense.paymentDate | date: "dd MMM yyyy" }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

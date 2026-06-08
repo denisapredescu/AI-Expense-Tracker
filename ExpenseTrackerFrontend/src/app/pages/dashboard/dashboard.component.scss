@@ -1,0 +1,212 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.title-section h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.title-section p {
+  margin-top: 6px;
+  color: #777;
+}
+
+
+.example-month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.example-month-picker .mat-calendar-arrow {
+  display: none;
+}
+
+mat-form-field, .note {
+  padding: 30px;
+} 
+
+.overview-content {
+
+  display: flex;
+
+  align-items: center;
+
+  // gap: 40px;
+}
+
+/* CHART */
+.chart-wrapper {
+
+  width: 100%;
+
+  // height: 320px;
+}
+
+/* LEGEND */
+.legend {
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.legend-item {
+
+  display: grid;
+
+  grid-template-columns: 1fr auto auto;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.legend-left {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.legend-left p {
+
+  margin: 0;
+
+  font-weight: 500;
+}
+
+.amount {
+
+  font-weight: 600;
+}
+
+.percent {
+
+  color: #7c4dff;
+
+  font-weight: 600;
+}
+
+/* DOT */
+.dot {
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+}
+
+.bottom-dashboard-grid {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+}
+
+.transaction-left h4 {
+
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #1a1a1a;
+}
+
+.transaction-left p {
+
+  margin-top: 4px;
+
+  font-size: 13px;
+
+  color: #8e8e8e;
+}
+
+.transaction-right {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 4px;
+}
+
+.amount {
+
+  font-weight: 700;
+
+  color: #ef5350;
+}
+
+.category {
+
+  color: #8e8e8e;
+
+  font-size: 13px;
+}
+
+.view-all {
+
+  color: #7c4dff;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+
+  .bottom-dashboard-grid {
+
+    grid-template-columns: 1fr;
+  }
+}
+
+::ng-deep canvas {
+  height:auto;
+}
+
+.transaction-item{
+      display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+.meta {
+    gap: 5px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.dot {
+    text-align: center;
+}
+
+.pill {
+      background-color: white;
+    color: black;
+    padding: 0 8px;
+    border-radius: 10px;
+}
+.card-header {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,75 @@
+
+
+<app-entity-page-layout
+    title="Budgets"
+    subtitle="Manage and review your budgets"
+    entityName="budget"
+    [newSectionIsOpen]="newSectionIsOpen"
+    [isEmpty]="budgets.length === 0"
+    (toggleSection)="newSectionIsOpen = $event">
+
+    <app-new-budget
+        new-content
+        [budgets]="budgets"
+        (changeBudgets)="updateBudgets($event)">
+    </app-new-budget>   
+
+    <div filters class="filters">
+
+      <!-- DATE FILTER -->
+      <mat-form-field appearance="outline" class="filter-field">
+        <mat-label>Month</mat-label>
+
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [formControl]="selectedDate"
+          readonly
+          (dateChange)="setMonthAndYear($event, picker)"
+        />
+
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+
+        <mat-datepicker
+          #picker
+          startView="multi-year"
+          (monthSelected)="chosenMonthHandler($event, picker)"
+          (yearSelected)="chosenYearHandler($event)">
+        </mat-datepicker>
+      </mat-form-field>
+
+      <!-- SORT -->
+      <mat-form-field appearance="outline" class="filter-field">
+        <mat-label>Sort By</mat-label>
+
+        <mat-select [(ngModel)]="sortBy" (selectionChange)="applySort()">
+          <mat-option value="dateDesc">Newest</mat-option>
+          <mat-option value="dateAsc">Oldest</mat-option>
+          <mat-option value="amountDesc">Highest Amount</mat-option>
+          <mat-option value="amountAsc">Lowest Amount</mat-option>
+        </mat-select>
+      </mat-form-field> 
+
+        <!-- RESET -->  
+          <button
+        mat-raised-button
+        class="delete-btn"
+        (click)="resetDateSelector()"
+      >
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </div>
+
+    <ng-container content>
+        <app-budget-form
+            *ngFor="let bud of budgets"
+            [budget]="bud"
+            [actions]="{ edit: true, save: true, cancel: true, delete: true }"
+            (save)="saveBudget($event)"
+            (edit)="enableEdit($event)"
+            (cancel)="restoreExpense($event)"
+            (delete)="removeExpense($event)"
+        ></app-budget-form>
+    </ng-container>
+</app-entity-page-layout>
+

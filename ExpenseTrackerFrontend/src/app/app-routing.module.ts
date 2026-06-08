@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth-guard.guard';
-import { AuthComponent } from './modules/auth/auth/auth.component';
+import { AuthComponent } from './pages/auth/auth/auth.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
-import { ExpensesComponent } from './modules/expenses/expenses.component';
-import { BudgetsComponent } from './modules/budgets/budgets.component';
+import { ExpensesComponent } from './pages/expenses/expenses.component';
+import { BudgetsComponent } from './pages/budgets/budgets.component';
+import { NewExpenseComponent } from './pages/expenses/new-expense/new-expense.component';
+import { NewBudgetComponent } from './pages/budgets/new-budget/new-budget.component';
 
 const routes: Routes = [
 
@@ -17,7 +19,9 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'expenses', component: ExpensesComponent },
+      { path: 'expenses/new', component: NewExpenseComponent },
       { path: 'budgets', component: BudgetsComponent },
+      { path: 'budgets/new', component: NewBudgetComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   },
@@ -33,7 +37,7 @@ const routes: Routes = [
     path: 'auth',
    // loadChildren: () => import('src/app/modules/auth/auth.module').then(m => m.AuthModule),
   loadChildren: () =>
-  import('./modules/auth/auth.module').then(m => m.AuthModule)
+  import('./pages/auth/auth.module').then(m => m.AuthModule)
   
   },
   // {

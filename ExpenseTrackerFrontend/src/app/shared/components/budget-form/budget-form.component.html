@@ -1,0 +1,119 @@
+<div class="expense-card" [ngClass]="{ 'on-list': !isNewForm()}">
+
+
+   <div >
+  
+    <!-- CATEGORY + DATE -->
+    <div class="row budget-form" *ngIf="budget.isEditing">
+      <mat-form-field appearance="outline" [class.readonly]="!budget.isEditing">
+
+        <mat-label>Amount</mat-label>
+
+        <input matInput type="number" placeholder="0.00" [(ngModel)]="budget.monthlyLimit"
+          [class.readonly]="!budget.isEditing" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" [class.readonly]="!budget.isEditing">
+
+          <mat-label>Budget Month</mat-label>
+
+          <!-- [(ngModel)]="selectedDate" -->
+          <input
+              matInput
+          [matDatepicker]="picker"
+            [formControl]="selectedDate"
+         
+         [class.readonly]="!budget.isEditing"
+          (dateChange)="setMonthAndYear($event, picker)">
+
+          
+
+          <mat-datepicker-toggle matSuffix [for]="picker" [class.readonly]="!budget.isEditing"></mat-datepicker-toggle>
+
+          <mat-datepicker
+            #picker
+            startView="multi-year"
+            [class.readonly]="!budget.isEditing"
+            (monthSelected)="chosenMonthHandler($event, picker)"
+            (yearSelected)="chosenYearHandler($event)">
+          </mat-datepicker>
+
+        </mat-form-field>
+
+    </div>
+
+    <div *ngIf="!budget.isEditing">
+
+   <!-- LEFT CONTENT -->
+  <div class="expense-main">
+
+    <!-- Top row: merchant + amount -->
+    <div class="expense-top">
+
+      <div class="merchant-info merchant">
+  
+         {{ budget.budgetMonth | date:'yyyy - MMMM':'':'en' }}
+        
+        </div>
+
+
+         
+      
+
+      <div class="amount" [class.income]="budget.monthlyLimit > 0">
+        {{ "+ " }}
+        {{ budget.monthlyLimit}} 
+        {{ " LEI"}}
+      </div>
+
+    </div>
+
+      <!-- <div class="expense-actions">
+      <mat-icon  (click)="edit.emit()">edit</mat-icon>
+  
+
+      <mat-icon color="warn" (click)="delete.emit()">delete</mat-icon>
+ 
+  </div> -->
+  </div>
+
+  <!-- ACTIONS -->
+
+</div>
+ 
+
+  </div>
+  <!-- BUTTONS -->
+  <div class="buttons">
+
+    <!-- EDIT -->
+    <!-- <button *ngIf="actions.edit && !budget.isEditing" mat-stroked-button class="edit-btn" (click)="edit.emit(budget)">
+      Edit
+    </button> -->
+
+      <mat-icon *ngIf="actions.edit && !budget.isEditing" (click)="edit.emit(budget)">edit</mat-icon>
+
+
+    <!-- SAVE -->
+    <button *ngIf="actions.save && budget.isEditing  && isNewForm()" mat-raised-button class="save-btn" (click)="save.emit(budget)">
+      Save
+    </button>
+
+     <mat-icon *ngIf="actions.save && budget.isEditing  && !isNewForm()"  (click)="save.emit(budget)">send</mat-icon>
+
+
+    <!-- CANCEL -->
+    <!-- <button *ngIf="actions.cancel && budget.isEditing" mat-button class="edit-btn" (click)="cancel.emit(budget)">
+      Cancel
+    </button> -->
+ <mat-icon *ngIf="actions.cancel && budget.isEditing" (click)="cancel.emit(budget)">cancel</mat-icon>
+
+    <!-- DELETE -->
+    <!-- <button *ngIf="actions.delete" mat-stroked-button class="delete-btn" (click)="delete.emit(budget)">
+      Delete
+    </button> -->
+  <mat-icon  *ngIf="actions.delete"  (click)="delete.emit(budget)">delete</mat-icon>
+
+  </div>
+
+</div>

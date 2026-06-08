@@ -16,25 +16,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
-    "Method": "DeleteExpense",
-    "RelativePath": "Expense/DeleteExpense",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "expenseId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
-    "Method": "GetExpenseByUser",
-    "RelativePath": "Expense/GetExpenseByUser",
+    "ContainingType": "Expense_Tracker.API.Controllers.AiController",
+    "Method": "GetInsights",
+    "RelativePath": "api/Ai/getInsights",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -43,6 +27,186 @@
         "Name": "userEmail",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "selectedMonth",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.BudgetController",
+    "Method": "DeleteBudget",
+    "RelativePath": "Budget/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "budgetId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.BudgetController",
+    "Method": "GetAll",
+    "RelativePath": "Budget/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.BudgetController",
+    "Method": "CreateBudget",
+    "RelativePath": "Budget/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "budget",
+        "Type": "Expense_Tracker.DAL.Entities.Budget",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.BudgetController",
+    "Method": "UpdateBudget",
+    "RelativePath": "Budget/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "budget",
+        "Type": "Expense_Tracker.DAL.Entities.Budget",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.CategoryController",
+    "Method": "CreateExpense",
+    "RelativePath": "Category/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "Expense_Tracker.DAL.Entities.Category",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.CategoryController",
+    "Method": "GetAll",
+    "RelativePath": "Category/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
+    "Method": "DeleteExpense",
+    "RelativePath": "Expense/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expense",
+        "Type": "Expense_Tracker.DAL.Entities.Expense",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
+    "Method": "GetExpensesByUser",
+    "RelativePath": "Expense/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
+    "Method": "CreateExpense",
+    "RelativePath": "Expense/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expense",
+        "Type": "Expense_Tracker.DAL.Entities.Expense",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
+    "Method": "SaveAllExpenses",
+    "RelativePath": "Expense/SaveAll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expenses",
+        "Type": "System.Collections.Generic.List\u00601[[Expense_Tracker.DAL.Entities.Expense, Expense Tracker.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "userEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Expense_Tracker.API.Controllers.ExpenseController",
+    "Method": "UpdateExpense",
+    "RelativePath": "Expense/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "budget",
+        "Type": "Expense_Tracker.DAL.Entities.Expense",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

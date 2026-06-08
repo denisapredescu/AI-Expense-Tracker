@@ -27,7 +27,7 @@ namespace Expense_Tracker.BLL.Services
             _tokenHelper = tokenHelper;
         }
 
-        public async Task<String> Register(RegisterModel registerModel)
+        public async Task<string> Register(RegisterModel registerModel)
         {
             var user = new User
             {

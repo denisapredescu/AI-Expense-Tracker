@@ -1,13 +1,11 @@
-
 <mat-sidenav-container class="container">
-
-
   <mat-sidenav mode="side" opened [style.width.px]="undefined">
     <app-navmenu></app-navmenu>
   </mat-sidenav>
 
   <mat-sidenav-content class="content-style">
-    <router-outlet ></router-outlet>
+    <div style="height: 100%">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
-
 </mat-sidenav-container>

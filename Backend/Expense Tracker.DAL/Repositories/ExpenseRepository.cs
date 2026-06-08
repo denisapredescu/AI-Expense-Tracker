@@ -1,5 +1,6 @@
 ﻿using Expense_Tracker.DAL.Entities;
 using Expense_Tracker.DAL.IRepositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,32 +18,34 @@ namespace Expense_Tracker.DAL.Repositories
                 _context = context;
             }
     
-            public async Task AddExpense(Expense expense)
+            public async Task Create(Expense expense)
             {
-                _context.Expenses.Add(expense);
+                await _context.Expenses.AddAsync(expense);
                 await _context.SaveChangesAsync();
             }
-    
-            public Task UpdateExpense(Expense expense)
-            {
+
+        public async Task Update(Expense expense)
+        {
+            try {
                 _context.Expenses.Update(expense);
-                return _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                throw new ArgumentException(ex.ToString());
+            }
             }
     
-            public async Task DeleteExpense(Expense expense)
+            public async Task Delete(Expense expense)
             {
                 _context.Remove(expense);
                 await _context.SaveChangesAsync();
             }
-    
-            public IQueryable<Expense> GetExpenseById(int id)
+
+            public IQueryable<Expense> GetAll()
             {
-                return _context.Expenses.Where(e => e.Id == id);
+            return _context.Expenses.Include(x => x.Category);
             }
-    
-            public IQueryable<Expense> GetExpensesByUserEmail(string userEmail)
-            {
-            return _context.Expenses.Where(e => e.UserEmail == userEmail); //.GroupBy(e => new { e.PaymentDate.Substring(0, 7) }).Select(g => g.AsEnumerable());
-        }
     }
 }
+
