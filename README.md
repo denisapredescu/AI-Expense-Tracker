@@ -1,354 +1,183 @@
+# 💰 AI Expense Tracker
 
+An AI-powered full-stack expense management system built with **Angular**, **.NET**, **SQL Server**, and **OpenRouter (LLM integration)**.
 
+---
 
+## 🚀 Features
 
+### 🔐 Authentication
+- Secure login system
+- User-based data isolation
+- Persistent session handling
 
+---
 
+### 📊 Dashboard
+- Overview of:
+  - Total budgets
+  - Total expenses
+  - Savings
+- Real-time financial summary
 
-PM> Add-Migration "Removed Category foreign key from Budget Table" -context 'Expense Tracker.DAL' -project 'Expense Tracker.API'
-PM> Update-Database
+---
 
+### 💰 Budgets Management
+- Create, update, and delete monthly budgets
+- Filter by month and year
+- Automatic recalculation and sorting
 
-# AI Expense Tracker
-AI Expense Tracker is a personal project developed in .NET and Angular with AI-integrated components
+---
 
-AI Integrated for Extracting the expenses from description:
-Use a local AI model with Ollama
+### 🧾 Expenses Management (AI-powered)
 
-![alt text](image.png)
+Users can input natural language text and the system automatically extracts structured expenses using AI.
 
-This runs AI directly on your PC.
+Example input: # 💰 AI Expense Tracker
 
-No API cost.
-No tokens.
-No monthly billing.
+An AI-powered full-stack expense management system built with **Angular**, **.NET**, **SQL Server**, and **OpenRouter (LLM integration)**.
 
-🚀 How it works
+---
 
-Your app:
+## 🚀 Features
 
-Angular → ASP.NET API → Ollama(local AI)
+### 🔐 Authentication
+- Secure login system
+- User-based data isolation
+- Persistent session handling
 
-You send:
+---
 
-Today I bought groceries at Lidl for 100 lei cash...
+### 📊 Dashboard
+- Overview of:
+  - Total budgets
+  - Total expenses
+  - Savings
+- Real-time financial summary
 
-AI returns:
+---
 
+### 💰 Budgets Management
+- Create, update, and delete monthly budgets
+- Filter by month and year
+- Automatic recalculation and sorting
+
+---
+
+### 🧾 Expenses Management (AI-powered)
+
+Users can input natural language text and the system automatically extracts structured expenses using AI.
+
+Example input: Paid 120 lei at Kaufland for groceries and 50 lei at OMV for fuel
+```
+
+AI extracts:
+
+```json
 [
   {
-    "category": "Groceries",
-    "amount": 100,
-    "paymentMethod": "Cash",
-    "merchant": "Lidl"
+    "categoryId": 1,
+    "amount": 120,
+    "currency": "LEI",
+    "paymentMethod": "Card",
+    "paymentDate": "2026-06-09",
+    "merchant": "Kaufland",
+    "description": "groceries"
   }
 ]
-✅ Installation
-
-Install:
- https://ollama.com/download?utm_source=chatgpt.com
-
-
-Then run:
-```
-ollama run llama3
 ```
 
-or better for extraction:
+## 📈 AI Insights
+
+The system generates financial insights using OpenRouter (GPT-3.5 Turbo).
+
+It analyzes:
+- Current month budgets
+- Current month expenses
+- Historical financial data
+
+It provides:
+- Monthly financial summary
+- Budget vs expense analysis
+- Comparison with previous months
+- Spending behavior insights
+
+---
+
+## 🧠 AI Integration
+
+AI is powered by OpenRouter API (LLM abstraction layer).
+
+### Core service:
+```csharp id="c1a2b3"
+OpenRouterExecutor(prompt)
 ```
-ollama run mistral
+
+## ✨ Features
+
+- AI-powered expense extraction from natural language input  
+- Strict JSON output enforcement for structured data  
+- Financial insights generation using LLM reasoning  
+- Prompt-engineered system for consistent responses  
+
+---
+
+## 🏗️ Architecture
+
+```text id="arch_001"
+Angular Frontend
+        ↓
+ASP.NET Core Web API
+        ↓
+Business Layer (Services)
+        ↓
+OpenRouter AI API
+        ↓
+SQL Server Database
 ```
 
-Why this is best for your project
-Pros
-100% free
-private
-works offline
-easy API
-perfect for portfolio projects
-Cons
-uses your computer resources
-slower than cloud AI
-weaker than GPT-4
+## 🛠️ Tech Stack
 
-But for expense extraction?
-👉 Totally enough.
+### Frontend
+- Angular  
+- TypeScript  
+- RxJS  
 
-✅ ASP.NET Integration
+### Backend
+- ASP.NET Core Web API  
+- C#  
 
-Ollama exposes a local REST API:
+### Database
+- SQL Server  
 
-http://localhost:11434/api/generate
+### AI
+- OpenRouter API  
+- GPT-3.5 Turbo  
 
-You call it from ASP.NET.
+---
 
-✅ Example Request
-{
-  "model": "mistral",
-  "prompt": "Extract expenses as JSON from: Today I bought groceries..."
-}
-✅ Example C# Service
-var httpClient = new HttpClient();
+## 📸 UI Preview (GIFs)
 
-var response = await httpClient.PostAsJsonAsync(
-    "http://localhost:11434/api/generate",
-    new
-    {
-        model = "mistral",
-        prompt = prompt,
-        stream = false
-    });
+- Login page (GIF demo)  
+- Dashboard (GIF demo)  
+- Budgets management (GIF demo)  
+- Expenses AI extraction (GIF demo)  
+- AI insights generation (GIF demo)  
 
-var result = await response.Content.ReadAsStringAsync();
+---
 
+## 🔑 Key Highlights
 
-✅ Better models for your use case
+- AI-driven expense extraction from natural language  
+- Financial insights powered by LLM  
+- Clear separation between backend logic and AI layer  
+- Full-stack architecture (.NET + Angular)  
+- Real-world financial tracking system  
 
-Inside Ollama:
+---
 
-Good:
-ollama run mistral
-Better:
-ollama run llama3
-Very good lightweight extraction:
-ollama run phi3
-✅ My recommendation for YOU
+## ⚠️ Notes
 
-Since you're building:
-
-ASP.NET backend
-Angular frontend
-expense extraction feature
-likely portfolio/student/personal app
-
-👉 Use:
-
-Ollama
-phi3 or mistral
-
-This gives:
-
-local AI
-zero cost
-realistic AI feature for CV/project
-⚠️ Important reality check
-
-Free AI models are:
-
-less accurate
-may hallucinate categories
-may format JSON badly sometimes
-
-So:
-
-ALWAYS validate output in backend
-
-And preferably:
-
-show editable preview before saving
-✅ Alternative free option (cloud)
-
-You could also use:
-
-Google AI Studio
-Gemini free tier
-
-BUT:
-
-rate limits
-requires internet
-may change pricing later
-
-For stable free development:
-👉 Ollama is better.
-
-🚀 What I would personally build
-
-For your project:
-
-Angular
-   ↓
-ASP.NET Core API
-   ↓
-Ollama (phi3)
-   ↓
-Structured JSON expenses
-
-That’s modern, impressive, and completely free.
-
-Yes — and you absolutely SHOULD predefine the categories.
-That makes the AI much more reliable.
-
-✅ My recommendation
-
-For your expense tracker:
-
-🥇 Best overall:
-Ollama + phi3
-
-Run:
-
-ollama run phi3
-Why phi3 specifically?
-
-Compared to:
-
-mistral
-llama3
-
-phi3 is:
-
-lightweight
-fast
-surprisingly good at structured extraction
-easier on RAM/CPU
-perfect for local apps
-
-For your task:
-
-“extract expenses into JSON”
-
-You do NOT need a huge model.
-
-✅ Yes — predefined categories are the correct approach
-
-This is MUCH better:
-
-Food
-Transportation
-Bills
-Entertainment
-Shopping
-Health
-Travel
-Education
-Other
-
-instead of allowing AI to invent:
-
-“Groceries”
-“Supermarket”
-“Food Shopping”
-“Car Fuel”
-etc
-✅ Best Prompt Strategy
-
-Tell AI:
-
-Extract expenses from this text.
-
-You MUST use ONLY these categories:
-- Food
-- Transportation
-- Bills
-- Entertainment
-- Shopping
-- Health
-- Travel
-- Education
-- Other
-
-Return valid JSON only.
-
-Text:
-"Today I went to Lidl and bought groceries for 100 lei cash..."
-✅ Example Output
-[
-  {
-    "category": "Food",
-    "amount": 100,
-    "currency": "RON",
-    "paymentMethod": "Cash",
-    "merchant": "Lidl",
-    "description": "Groceries from Lidl"
-  },
-  {
-    "category": "Transportation",
-    "amount": 50,
-    "currency": "RON",
-    "paymentMethod": null,
-    "merchant": null,
-    "description": "Gas for the car"
-  }
-]
-✅ Architecture I recommend
-Angular
-
-Textarea:
-
-Describe your expenses...
-
-↓
-
-ASP.NET API
-
-Sends prompt to Ollama
-
-↓
-
-Ollama (phi3)
-
-Returns JSON
-
-↓
-
-Backend validates JSON
-
-↓
-
-Angular preview
-
-↓
-
-User confirms save
-✅ Important production advice
-
-Even with predefined categories:
-
-AI may miss fields
-AI may output invalid JSON sometimes
-
-So:
-
-NEVER save directly
-
-Always:
-
-parse JSON
-validate
-let user confirm/edit
-✅ C# Model Example
-public class ExpenseAiDto
-{
-    public string Category { get; set; }
-    public decimal Amount { get; set; }
-    public string Currency { get; set; }
-    public string PaymentMethod { get; set; }
-    public string Merchant { get; set; }
-    public string Description { get; set; }
-}
-✅ Best UX idea
-
-After extraction:
-
-Show:
-
-Category	Amount	Merchant	Payment
-Food	100	Lidl	Cash
-Transportation	50	Gas station	-
-
-User edits if needed → Save.
-
-This feels VERY professional.
-
-✅ Final recommendation for YOU
-
-Use:
-
-Ollama
-phi3
-predefined categories
-JSON extraction
-ASP.NET validation layer
-
-That’s the best free architecture for your app.
+- AI responses are validated on backend  
+- Financial calculations are partially deterministic  
+- OpenRouter is used as LLM abstraction layer  
