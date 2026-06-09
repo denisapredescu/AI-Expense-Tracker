@@ -1,42 +1,27 @@
-
 <div class="statistics-card" style="display: flex; flex-direction: column; border: 1px solid #ccc; background-color: #3f3e3e; border-radius: 8px; padding: 16px; ; height:150px; box-shadow: 0 2px 7px #ffffff;
     justify-content: space-evenly;">
- 
-      <!-- HEADER -->
-  <div class="card-header"  style="display: flex; align-items: stretch; justify-content: space-between;">
-
+  <!-- HEADER -->
+  <div class="card-header" style="display: flex; align-items: stretch; justify-content: space-between;">
     <div>
       <p class="title" style="margin: 0; font-style: italic">{{ title }}</p>
       <h2 class="value" style="margin: 0; font-weight: 700;">{{ value }}</h2>
     </div>
 
-    <div class="icon-wrapper"  >
-      <mat-icon 
-      [style.backgroundColor]="color"
-        style="
+    <div class="icon-wrapper">
+      <mat-icon [style.backgroundColor]="color" style="
         border-radius: 5px;
         font-size: 36px;
         width: 36px;
         height: 36px;
         line-height: 36px;
     ">
-
-      {{ icon }}</mat-icon>
+        {{ icon }}</mat-icon>
     </div>
-
   </div>
 
-<div class="chart-container">
-  <canvas
-    baseChart
-    [data]="lineChartData"
-    [options]="lineChartOptions"
-    [style.borderColor]="color"
-    [type]="'line'"
-    style="height: 70px;"
-    >
-  </canvas>
+  <div class="chart-container">
+    <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" [style.borderColor]="color" [type]="'line'"
+      style="height: 70px;">
+    </canvas>
+  </div>
 </div>
-
-  </div>
-

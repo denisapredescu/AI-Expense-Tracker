@@ -10,8 +10,10 @@ import { SharedDataService } from 'src/app/services/shared-data.service';
 })
 
 export class NavmenuComponent {
-  constructor(private router: Router,
-        private sharedDataService: SharedDataService) {}
+  constructor(
+    private router: Router,
+    private sharedDataService: SharedDataService
+  ) { }
 
   collapsed = false;
 
@@ -22,8 +24,9 @@ export class NavmenuComponent {
   logout() {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('Role');
+    localStorage.removeItem('email');
     this.sharedDataService.changeUserData('');
-          
+
     this.router.navigate(['/auth/login']);
   }
 }

@@ -1,41 +1,27 @@
-  <!-- LOGIN -->
-        <form #loginFormRef="ngForm" (ngSubmit)="submitLogin()" class="form active">
-
+<form #loginFormRef="ngForm" (ngSubmit)="submitLogin()" class="form active">
   <h3>Welcome Back</h3>
 
   <div class="input-group">
     <label>Email</label>
-    <input
-      name="email"
-      type="email"
-      [(ngModel)]="loginForm.email"
-      required
-      email
-      #logEmail="ngModel">
-
+    <input name="email" type="email" [(ngModel)]="loginForm.email" required email #logEmail="ngModel">
+    
     <div *ngIf="logEmail.invalid && (logEmail.dirty || logEmail.touched)" style="color:crimson">
-        <small>Email is required.</small>
-      </div>
+      <small>Email is required.</small>
+    </div>
   </div>
 
   <div class="input-group">
     <label>Password</label>
-    <input
-      name="password"
-      type="password"
-      [(ngModel)]="loginForm.password"
-      required
-      #logPassword="ngModel">
+    <input name="password" type="password" [(ngModel)]="loginForm.password" required #logPassword="ngModel">
 
     <div *ngIf="logPassword.invalid && (logPassword.dirty || logPassword.touched)" style="color:crimson">
       <small>Password is required.</small>
     </div>
   </div>
 
-  <button type="submit" class="submit-btn" [disabled]="loginFormRef.invalid" >
+  <button type="submit" class="submit-btn" [disabled]="loginFormRef.invalid">
     Login
   </button>
-
 </form>
 
 <div class="register-link">
@@ -43,5 +29,5 @@
 </div>
 
 <div *ngIf="error" class="error-container">
- <p>{{ error }}</p>
+  <p>{{ error }}</p>
 </div>

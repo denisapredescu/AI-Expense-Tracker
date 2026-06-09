@@ -1,25 +1,17 @@
 .expense-card {
-  //   background: rgb(29, 28, 28);
-  //   border-radius: 20px;
-  //   padding: 22px;
-  //   box-shadow:
-  //     0 4px 20px rgba(0,0,0,0.06);
-  //   transition: 0.2s;
-
   background: rgb(69 69 69);
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 2px 15px rgba(256, 256, 256, 0.1);
   transition: 0.2s;
-
 }
 
 .on-list {
   display: grid;
   grid-template-columns: calc(100% - 100px) 80px;
   gap: 20px;
-      justify-items: stretch;
-    align-items: center;
+  justify-items: stretch;
+  align-items: center;
 }
 
 .expense-card:hover {
@@ -58,27 +50,20 @@
 }
 
 .buttons {
-  //   display: flex;
-  //   justify-content: flex-start;
-  //   gap: 10px;
-  //   margin-top: 10px;
   display: flex;
   gap: 10px;
   margin-top: 10px;
-      flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 mat-icon {
   cursor: pointer;
 }
+
 mat-icon:hover {
   color: #4f46e5;
 }
-
-// }
-
-
 
 .readonly {
   pointer-events: none;
@@ -89,7 +74,6 @@ mat-icon:hover {
   /* removes grey fade */
   border-color: white !important;
   /* removes grey border */
-
 }
 
 .readonly .mat-mdc-select-trigger {
@@ -122,37 +106,6 @@ mat-icon:hover {
   border-radius: 8px;
   cursor: pointer;
 }
-
-// ::ng-deep .mat-mdc-form-field {
-//   font-size: 13px;
-// }
-
-// ::ng-deep .mat-mdc-form-field-flex {
-//   font-size: 13px !important;
-//   height: 50px;
-//     align-items: center !important;
-// }
-
-// ::ng-deep .mat-mdc-text-field-wrapper {
-// //   padding-top: 2px !important;
-// //   padding-bottom:  2px !important;
-//   font-size:13px;
-// }
-
-// ::ng-deep .mat-mdc-form-field-infix {
-//   min-height: 36px;
-// }
-
-// input,
-// textarea {
-//   font-size: 13px;
-// }
-
-// Source - https://stackoverflow.com/a/54762506
-// Posted by Akber Iqbal, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-06-01, License - CC BY-SA 4.0
-
-
 
 
 
@@ -251,12 +204,14 @@ mat-icon:hover {
 .amount {
   font-size: 16px;
   font-weight: 700;
-  color: #dc2626; /* default expense red */
+  color: #dc2626;
+  /* default expense red */
   white-space: nowrap;
 }
 
 .amount.income {
-  color: #fa1414; /* green for income */
+  color: #fa1414;
+  /* green for income */
 }
 
 /* ACTIONS */

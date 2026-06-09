@@ -10,18 +10,18 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     private router: Router,
   ) {
   }
-  
-  
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-     const isAuthorized = !(localStorage.getItem('accessToken') === ''); // are voie sa intre doar daca este logat, deci daca exista in localStorage un accesToken, indiferent de valoarea lui
-                                                                        //pentru intrarea in Order si Basket
+    const isAuthorized = !(localStorage.getItem('accessToken') === ''); // are voie sa intre doar daca este logat, deci daca exista in localStorage un accesToken, indiferent de valoarea lui
+    //pentru intrarea in Order si Basket
     if (!isAuthorized) {
       console.error('You are not login!!');
       this.router.navigate(['/auth']);
     }
-    return true ; //isAuthorized;
+
+    return isAuthorized;
   }
 
   canActivateChild(

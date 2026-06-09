@@ -1,5 +1,4 @@
 <div class="new-expense-page">
-
   <!-- HEADER -->
   <div class="page-header">
     <div class="title-section">
@@ -8,10 +7,6 @@
     </div>
   </div>
 
-
- 
-    <app-budget-form [budget]="newBudget" 
-      [actions]="{ edit: false, save: true, cancel: false, delete: false }"
-      (save)="saveBudget($event)"></app-budget-form>
-
+  <app-budget-form [budget]="newBudget" [actions]="{ edit: false, save: true, cancel: false, delete: false }"
+    (save)="saveBudget($event)"></app-budget-form>
 </div>

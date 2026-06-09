@@ -10,12 +10,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
-
-
-
   public formType: string = 'login';
-
-  public error : string | boolean = false;
+  public error: string | boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -24,20 +20,18 @@ export class AuthComponent implements OnInit {
     private sharedDataService: SharedDataService
   ) { }
 
-  
   ngOnInit() {
-  this.activatedRoute.data.subscribe(data => {
-     this.formType = data['formType'];
-  });
-}
-  
+    this.activatedRoute.data.subscribe(data => {
+      this.formType = data['formType'];
+    });
+  }
+
   showLogin() {
     this.router.navigate(['/auth/login']);
   }
 
-    showRegister() {
-      this.router.navigate(['/auth/register']);
-    }
-
+  showRegister() {
+    this.router.navigate(['/auth/register']);
+  }
 }
 

@@ -1,11 +1,9 @@
-<div
-  style="
+<div style="
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
-  "
->
+  ">
   <div class="title-section">
     <h2>Dashboard</h2>
     <p><i>Here's a summary of your expenses</i></p>
@@ -14,90 +12,52 @@
     <mat-form-field appearance="outline" style="padding: 10px">
       <mat-label>Dashboard for a month:</mat-label>
 
-      <input
-        matInput
-        [matDatepicker]="picker"
-        [formControl]="selectedDate"
-        readonly="true"
-        (dateChange)="setMonthAndYear($event, picker)"
-      />
+      <input matInput [matDatepicker]="picker" [formControl]="selectedDate" readonly="true"
+        (dateChange)="setMonthAndYear($event, picker)" />
 
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
 
-      <mat-datepicker
-        #picker
-        startView="multi-year"
-        (monthSelected)="chosenMonthHandler($event, picker)"
-        (yearSelected)="chosenYearHandler($event)"
-      >
+      <mat-datepicker #picker startView="multi-year" (monthSelected)="chosenMonthHandler($event, picker)"
+        (yearSelected)="chosenYearHandler($event)">
       </mat-datepicker>
     </mat-form-field>
   </div>
 </div>
 
-<div
-  style="
+<div style="
     display: grid;
     grid-template-columns: repeat(4, 23%);
     justify-content: space-between;
-  "
->
-  <app-statistics-card
-    title="Budget"
-    value="{{ monthBudget.toFixed(2) }}"
-    icon="payments"
-    color="#6c4fa4"
-  />
-  <app-statistics-card
-    title="Expenses"
-    value="{{ (totalExpense).toFixed(2) || 0 }}"
-    icon="shopping_bag_speed"
-    color="rgba(255, 99, 132, 1)"
-  />
+  ">
+  <app-statistics-card title="Budget" value="{{ monthBudget.toFixed(2) }}" icon="payments" color="#6c4fa4" />
 
-  <app-statistics-card
-    *ngIf="monthBudget - totalExpense < 0"
-    title="Savings"
-    value="{{ (monthBudget - totalExpense).toFixed(2) || 0 }}"
-    icon="savings"
-    color="#ea2314"
-  />
+  <app-statistics-card title="Expenses" value="{{ (totalExpense).toFixed(2) || 0 }}" icon="shopping_bag_speed"
+    color="rgba(255, 99, 132, 1)" />
 
-  <app-statistics-card
-    *ngIf="monthBudget - totalExpense >= 0"
-    title="Savings"
-    value="{{ (monthBudget - totalExpense).toFixed(2) }}"
-    icon="savings"
-    color="rgba(60, 198, 14, 1)"
-  />
+  <app-statistics-card *ngIf="monthBudget - totalExpense < 0" title="Savings"
+    value="{{ (monthBudget - totalExpense).toFixed(2) || 0 }}" icon="savings" color="#ea2314" />
 
-  <app-statistics-card
-    title="Expenses Per Year"
-    value="{{ totalExpensePerYear.toFixed(2) || 0 }}"
-    icon="attach_money"
-    color="rgba(255, 205, 132, 1)"
-  />
+  <app-statistics-card *ngIf="monthBudget - totalExpense >= 0" title="Savings"
+    value="{{ (monthBudget - totalExpense).toFixed(2) }}" icon="savings" color="rgba(60, 198, 14, 1)" />
+
+  <app-statistics-card title="Expenses Per Year" value="{{ totalExpensePerYear.toFixed(2) || 0 }}" icon="attach_money"
+    color="rgba(255, 205, 132, 1)" />
 </div>
 
-<div
-  style="
+<div style="
     margin-top: 20px;
     width: 100%;
     display: grid;
     grid-template-columns: 59% 39%;
     justify-content: space-between;
-  "
->
-  <div
-    class="chart-container small-chart"
-    style="
+  ">
+  <div class="chart-container small-chart" style="
       border: 1px solid #ccc;
       background-color: #3f3e3e;
       border-radius: 8px;
       padding: 16px;
       box-shadow: 0 2px 7px #ffffff;
-    "
-  >
+    ">
     <!-- OVERVIEW -->
     <div class="overview-card">
       <div class="card-header">
@@ -109,58 +69,20 @@
       <div class="overview-content">
         <!-- CHART -->
         <div class="chart-wrapper">
-          <canvas
-            baseChart
-            [data]="pieChartData"
-            [options]="pieChartOptions"
-            [type]="'doughnut'"
-          >
+          <canvas baseChart [data]="pieChartData" [options]="pieChartOptions" [type]="'doughnut'">
           </canvas>
         </div>
-
-        <!-- LEGEND -->
-        <!-- <div class="legend">
-
-        <div
-          class="legend-item"
-          *ngFor="let expense of expensesGroupBy">
-
-          <div class="legend-left">
-
-            <span
-              class="dot"
-              [style.backgroundColor]="expense.color">
-            </span>
-
-            <p>{{ expense.category }}</p>
-
-          </div>
-
-          <span>
-            ${{ expense.amount }}
-          </span>
-
-          <span class="percent">
-            {{ expense.percent }}%
-          </span>
-
-        </div>
-
-      </div> -->
       </div>
     </div>
   </div>
 
-  <div
-    class="chart-container"
-    style="
+  <div class="chart-container" style="
       border: 1px solid #ccc;
       background-color: #3f3e3e;
       border-radius: 8px;
       padding: 16px;
       box-shadow: 0 2px 7px #ffffff;
-    "
-  >
+    ">
     <!-- AI INSIGHTS -->
     <div class="insights-card">
       <div class="card-header">
@@ -176,7 +98,6 @@
           {{ insights.monthlyInsights }}
         </p>
       </div>
-
 
       <div *ngIf="loadingGettingInsights" style="    display: flex;
     flex-direction: row;
@@ -197,26 +118,21 @@
   </div>
 </div>
 
-<div
-  style="
+<div style="
     margin-top: 20px;
     width: 100%;
     display: grid;
     grid-template-columns: 49% 49%;
     justify-content: space-between;
     height: 300px;
-  "
->
-  <div
-    class="chart-container small-chart"
-    style="
+  ">
+  <div class="chart-container small-chart" style="
       border: 1px solid #ccc;
       background-color: #3f3e3e;
       border-radius: 8px;
       padding: 16px;
       box-shadow: 0 2px 7px #ffffff;
-    "
-  >
+    ">
     <div class="trend-card">
       <div class="card-header">
         <div>
@@ -230,27 +146,19 @@
       </div>
 
       <div class="trend-chart-wrapper">
-        <canvas
-          baseChart
-          [data]="trendChartData"
-          [options]="trendChartOptions"
-          [type]="'line'"
-        >
+        <canvas baseChart [data]="trendChartData" [options]="trendChartOptions" [type]="'line'">
         </canvas>
       </div>
     </div>
   </div>
 
-  <div
-    class="chart-container"
-    style="
+  <div class="chart-container" style="
       border: 1px solid #ccc;
       background-color: #3f3e3e;
       border-radius: 8px;
       padding: 16px;
       box-shadow: 0 2px 7px #ffffff;
-    "
-  >
+    ">
     <div class="transactions-card">
       <div class="card-header">
         <h2>Latest Transactions</h2>
@@ -258,10 +166,7 @@
         <a class="view-all" routerLink="/expenses"> View all </a>
       </div>
 
-      <div
-        class="transaction-item"
-        *ngFor="let expense of sortedDescExpensesDb() | slice: 0 : 4"
-      >
+      <div class="transaction-item" *ngFor="let expense of sortedDescExpensesDb() | slice: 0 : 4">
         <mat-icon>shopping_bag_speed</mat-icon>
         <div class="meta">
           <span class="pill">{{ expense.category?.name }}</span>

@@ -1,11 +1,5 @@
-
 .expenses-page {
-  // padding: 30px;
-  // min-height: 100vh;
-  // display: inline-block;
   height: 100%;
-  // vertical-align: middle;
-  // padding-bottom: 20px;
 }
 
 .topbar {
@@ -29,27 +23,18 @@
 }
 
 .filters {
-  // display: flex;
-  // gap: 15px;
-  // align-items: center;
-  // flex-wrap: wrap;
-      display: grid;
-    gap: 15px;
-    align-items: center;
-    flex-wrap: wrap;
-    grid-auto-flow: column;
-}
-
-.filter-field {
-  // width: 220px;
-  // width: 200px;
+  display: grid;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-auto-flow: column;
 }
 
 .expenses-grid {
   display: flex;
-    gap: 24px;
-    flex-direction: column;
-     margin-bottom: 20px;
+  gap: 24px;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .empty-state {
@@ -64,33 +49,23 @@
   height: 70px;
 }
 
-
-
-.filter-field > ::ng-deep .mat-mdc-form-field-subscript-wrapper  {
-    height: 0 !important;
+.filter-field> ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  height: 0 !important;
 }
 
-// ::ng-deep .mat-mdc-form-field-subscript-wrapper {
-//     display: none;
-// }
-
-.expenses-page{
-      display: grid;
-    /* grid-auto-flow: column; */
-    // grid-template-columns: 45% 55%;
-    
+.expenses-page {
+  display: grid;
   grid-template-columns: 45% 55%;
-    gap: 10px;
-    height: 100%;
+  gap: 10px;
+  height: 100%;
 }
 
 .new-expense-section {
   background: #242424;
   padding: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    transition: all 0.3s ease-in-out;
-    
-    margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .close-new-section {
@@ -107,16 +82,19 @@
 
 .hide-new-section {
   grid-template-columns: 65px auto;
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.new-expense-text { writing-mode: tb-rl; color: #777;
-    font-size: 14px; }
+.new-expense-text {
+  writing-mode: tb-rl;
+  color: #777;
+  font-size: 14px;
+}
 
 .closed-new-section {
-   background: #242424;
-padding: 12px;
-width: 50px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-   margin-bottom: 20px;
+  background: #242424;
+  padding: 12px;
+  width: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
 }

@@ -1,143 +1,65 @@
-
 <div class="new-expense-page">
-
   <!-- HEADER -->
   <div class="page-header">
     <div class="title-section">
       <h2>Add New Expense</h2>
       <p><i>Track expenses manually or extract them with AI helper</i></p>
     </div>
-<!-- 
-    <button class="back-btn">
-      ← Back to Expenses
-    </button> -->
   </div>
-
 
   <!-- MODE SELECTOR -->
   <div class="mode-selector">
-
-    <button
-      class="mode-btn"
-      [class]="selectedMode === 'ai' ? 'active' : ''"
-      (click)="selectedMode = 'ai'"
-    >
+    <button class="mode-btn" [class]="selectedMode === 'ai' ? 'active' : ''" (click)="selectedMode = 'ai'">
       AI Assistant
     </button>
 
-    <button
-      class="mode-btn"
-      [class]="selectedMode === 'manual' ? 'active' : ''"
-      (click)="selectedMode = 'manual'"
-    >
+    <button class="mode-btn" [class]="selectedMode === 'manual' ? 'active' : ''" (click)="selectedMode = 'manual'">
       Manual Entry
     </button>
-
-    
-
   </div>
 
-
   <!-- MANUAL SECTION -->
-  <div *ngIf="selectedMode === 'manual'" >
-
+  <div *ngIf="selectedMode === 'manual'">
     <div class="section-title">
       <p>Fill in the expense information manually.</p>
     </div>
 
-    <app-expense-form
-  [expense]="newExpense"
-  [categories]="categories"
-  [actions]="{ edit: false, save: true, cancel: false, delete: false }"
-  (save)="saveExpense($event)"
-></app-expense-form>
-
+    <app-expense-form [expense]="newExpense" [categories]="categories"
+      [actions]="{ edit: false, save: true, cancel: false, delete: false }"
+      (save)="saveExpense($event)"></app-expense-form>
   </div>
-
 
   <!-- AI SECTION -->
   <div *ngIf="selectedMode === 'ai'">
-
     <div class="section-title">
       <p>Describe your purchases and let AI extract expenses automatically.</p>
-   </div>
-
-<!-- <div class="ai-container"> -->
-
-  <!-- INPUT SECTION -->
-  <div class="input-card">
-
-    <textarea
-      rows="5"
-      [disabled]="isLoading"
-      pTextarea
-      [(ngModel)]="value"
-      placeholder="Describe your expenses..."
-      class="textarea">
-    </textarea>
-
-    <button class="extract-btn" (click)="extract()" [disabled]="isLoading">
-      {{ isLoading ? 'Extracting...' : 'Extract Expenses' }}
-      <!-- Extract Expenses -->
-    </button>
-
-    <div *ngIf="error" class="error-message">
-      {{ error }} 
     </div>
 
+    <!-- INPUT SECTION -->
+    <div class="input-card">
+
+      <textarea rows="5" [disabled]="isLoading" pTextarea [(ngModel)]="value" placeholder="Describe your expenses..."
+        class="textarea">
+    </textarea>
+
+      <button class="extract-btn" (click)="extract()" [disabled]="isLoading">
+        {{ isLoading ? 'Extracting...' : 'Extract Expenses' }}
+      </button>
+
+      <div *ngIf="error" class="error-message">
+        {{ error }}
+      </div>
+    </div>
+
+    <!-- EXPENSE LIST -->
+    <div *ngIf="aiGeneratedExpenses.length > 0" class="expenses-wrapper">
+      <app-expense-form *ngFor="let exp of aiGeneratedExpenses" [expense]="exp" [categories]="categories"
+        [actions]="{ edit: false, save: false, cancel: false, delete: true }"
+        (delete)="removeExpense($event)"></app-expense-form>
+
+      <button class="save-btn" (click)="saveAll()">
+        Save All Expenses
+      </button>
+    </div>
   </div>
-
-  <!-- EXPENSE LIST -->
-  <div *ngIf="aiGeneratedExpenses.length > 0" class="expenses-wrapper">
-
-    <app-expense-form
-  *ngFor="let exp of aiGeneratedExpenses"
-  [expense]="exp"
-  [categories]="categories"
-  [actions]="{ edit: false, save: false, cancel: false, delete: true }"
-
-    (delete)="removeExpense($event)"
-></app-expense-form>
-
-    <!-- <div *ngFor="let exp of expenses; let i = index" class="expense-card">
-
-      <div class="row">
-        <select [(ngModel)]="exp.categoryId">
-          <option value="">Category</option>
-          <option *ngFor="let category of categories" [value]="category.id">
-            {{ category.name }}
-          </option>
-        </select>
-
-        <input [(ngModel)]="exp.amount" type="number" placeholder="Amount" />
-      </div>
-
-      <div class="row">
-        <input [(ngModel)]="exp.merchant" placeholder="Merchant" />
-        <input [(ngModel)]="exp.paymentDate" type="date" />
-      </div>
-
-      <div class="row">
-        <input [(ngModel)]="exp.description" placeholder="Description" />
-
-        <select [(ngModel)]="exp.paymentMethod">
-          <option value="">Payment</option>
-          <option value="Cash">Cash</option>
-          <option value="Card">Card</option>
-        </select>
-      </div>
-
-    </div> -->
-
-    <button class="save-btn" (click)="saveAll()">
-      Save All Expenses
-    </button>
-
-  </div>
-
 </div>
-
-  <!-- </div> -->
-
-</div>
-

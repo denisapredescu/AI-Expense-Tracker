@@ -1,5 +1,4 @@
-export interface LoginResult
-{
+export interface LoginResult{
     success: boolean;
     accessToken: string;
 }

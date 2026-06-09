@@ -1,15 +1,11 @@
-import { ExpenseModel } from "./ExpenseModel";
-
 export interface BudgetModel {
-    id?: number;
- 
+  id?: number;
   monthlyLimit: number;
- 
   budgetMonth: Date;
-
   userEmail: string;
-    isEditing?: boolean;
+
+  isEditing?: boolean;
   isloading?: boolean;
-isSaving?: boolean;
+  isSaving?: boolean;
   originalBudget?: BudgetModel;
 }

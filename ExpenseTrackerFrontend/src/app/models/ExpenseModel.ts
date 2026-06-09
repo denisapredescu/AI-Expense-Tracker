@@ -1,9 +1,8 @@
 import { CategoryModel } from "./CategoryModel";
 
 export interface ExpenseModel {
-    id?: number;
+  id?: number;
   categoryId: number;
-//   category: string;
   category?: CategoryModel;
   amount: number;
   currency?: string;
@@ -13,9 +12,8 @@ export interface ExpenseModel {
   description?: string;
   userEmail: string;
 
-
   isEditing?: boolean;
   isloading?: boolean;
-isSaving?: boolean;
+  isSaving?: boolean;
   originalExpense?: ExpenseModel;
 }

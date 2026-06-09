@@ -9,7 +9,6 @@ import { SharedDataService } from 'src/app/services/shared-data.service';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { DateAdapter } from '@angular/material/core';
-
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { Moment } from 'moment';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -30,11 +29,9 @@ export const MONTH_YEAR_FORMATS = {
   selector: 'app-expenses',
   templateUrl: './expenses.component.html',
   styleUrls: ['./expenses.component.scss'],
-    providers: [
-    // { provide: MAT_NATIVE_DATE_FORMATS, useValue: MONTH_YEAR_FORMATS },
-    // { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
+  providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-  { provide: MAT_DATE_FORMATS, useValue: MONTH_YEAR_FORMATS }
+    { provide: MAT_DATE_FORMATS, useValue: MONTH_YEAR_FORMATS }
   ]
 })
 export class ExpensesComponent implements OnInit {
@@ -44,133 +41,22 @@ export class ExpensesComponent implements OnInit {
     private sharedDataService: SharedDataService,
     private snackbar: MatSnackBar
   ) { }
-  
-  // value: string = '';
+
   expenses: ExpenseModel[] = [];
- allExpenses: ExpenseModel[] = [];
-newSectionIsOpen: boolean = false;
+  allExpenses: ExpenseModel[] = [];
+  newSectionIsOpen: boolean = false;
   categories: CategoryModel[] = [];
-  // isLoading: boolean= false;
-
-    public currentMonth: string = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
-  
+  currentMonth: string = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
   selectedDate = new FormControl<Date | null>(null);
-  
   chosenYear: number | null = null;
-  
   chosenMonth: number | null = null;
-  
-  setMonthAndYear(event: any, datepicker: any) {
-    // this.selectedDate = event.value;
-    this.selectedDate.setValue(event.value);
-    datepicker.close();
-    
-    console.log('Selected:', this.selectedDate);
-    
-  }
-  
-  chosenYearHandler(normalizedYear: Moment) {
-    console.log('Chosen Year:', normalizedYear);
-    this.chosenYear = normalizedYear.year(); // Extract the year from the selected date
-  }
-  
-  chosenMonthHandler(normalizedMonth: Moment, datepicker: any) {
-    const year = this.chosenYear ?? new Date().getFullYear();
-    const month = normalizedMonth.month();
-  
-    const newDate = new Date(year, month, 1);
-  
-    this.selectedDate.setValue(newDate);
-  
-    datepicker.close();
-  
-    console.log('Selected:', this.selectedDate);console.log('Expenses:', this.expenses);
-
-
-    this.filterAndSortExpenses();
-//   this.expenses = this.allExpenses.filter(exp => {
-// console.log('Filtering expense:', exp);
-//       if (!exp.paymentDate) return false;
-// console.log('Filtering expense:', exp);
-//   const expDate = new Date(exp.paymentDate);
-
-//   if (isNaN(expDate.getTime())) return false;
-
-//   const selected = this.selectedDate.value;
-//   if (!selected) return true;
-// console.log('Comparing expense date:', expDate, 'with selected date:', selected);
-//   return (
-//     expDate.getFullYear() === selected.getFullYear() &&
-//     expDate.getMonth() === selected.getMonth()
-//   );
-// });
-
-
-  }
-  
-  resetDateSelector() {
-    this.selectedDate.setValue(null);
-    this.chosenYear = null;
-    this.chosenMonth = null;
-    this.expenses = [...this.allExpenses];
-    this.selectedCategoryId = 0; // Reset category filter as well
-    this.sortBy = 'dateDesc'; // Reset sorting to default
-    this.applySort();
-  }
-selectedCategoryId: number = 0; // 0 will represent "All" categories
-
-
-filterAndSortExpenses() {
-  this.expenses = [...this.allExpenses];
-  this.filterByPaymentDate(this.selectedDate.value);
-  this.filterByCategory();
-  this.applySort();
-}
-
-filterByPaymentDate(selectedDate: Date | null) {
-  if (!selectedDate) {
-    // this.expenses = [...this.allExpenses];
-    return;
-  }
-  this.expenses = this.expenses.filter(exp => {
-    if (!exp.paymentDate) return false;
-    const expDate = new Date(exp.paymentDate);
-      if (isNaN(expDate.getTime())) return false;
-    return (
-      expDate.getFullYear() === selectedDate.getFullYear() &&
-      expDate.getMonth() === selectedDate.getMonth()
-    );
-  });
-}
-
-
-  filterByCategory() {
-    if (this.selectedCategoryId === 0) {
-      // this.expenses = [...this.allExpenses]; // Return all expenses if "All" is selected
-      return;
-    }
-    this.expenses = this.expenses.filter(expense => expense.categoryId === this.selectedCategoryId);
-  }
-
+  selectedCategoryId: number = 0; // 0 will represent "All" categories
 
   ngOnInit() {
     this.categoryService.getAll().subscribe(res => {
       this.categories = res;
       console.log('Categories loaded:', this.categories);
     });
-
-        this.expenses = [
-    {
-     id: 1, categoryId: 1, amount: 100, currency: 'LEI',merchant:'Store',  paymentMethod: 'Cash', paymentDate: new Date('2026-05-20T00:00:00'),
-      userEmail: 'denisa@gmail.com', isEditing: true
-    },
-
-    {id: 2, categoryId: 2, isEditing: false ,amount: 50, currency: 'LEI',merchant:'Store',  paymentMethod: 'Cash', paymentDate: new Date('2026-05-25T00:00:00'), userEmail: 'denisa@gmail.com'},
-
-    {id: 3, categoryId: 4, amount: 13, currency: 'LEI', paymentMethod: 'Cash', paymentDate: new Date('2026-05-23T00:00:00'), userEmail: 'denisa@gmail.com'}
-        ];
-        this.allExpenses = [...this.expenses];
-
 
     this.expensesService.getAll(this.sharedDataService.currentEmail).subscribe(res => {
       this.expenses = res;
@@ -183,30 +69,82 @@ filterByPaymentDate(selectedDate: Date | null) {
         duration: 3000
       });
     });
-  
+  }
 
-console.log('Initial expenses:', this.expenses);
-        this.applySort();
+  setMonthAndYear(event: any, datepicker: any) {
+    this.selectedDate.setValue(event.value);
+    datepicker.close();
+  }
+
+  chosenYearHandler(normalizedYear: Moment) {
+    this.chosenYear = normalizedYear.year(); // Extract the year from the selected date
+  }
+
+  chosenMonthHandler(normalizedMonth: Moment, datepicker: any) {
+    const year = this.chosenYear ?? new Date().getFullYear();
+    const month = normalizedMonth.month();
+    const newDate = new Date(year, month, 1);
+
+    this.selectedDate.setValue(newDate);
+    datepicker.close();
+
+    this.filterAndSortExpenses();
+  }
+
+  resetDateSelector() {
+    this.selectedDate.setValue(null);
+    this.chosenYear = null;
+    this.chosenMonth = null;
+    this.expenses = [...this.allExpenses];
+    this.selectedCategoryId = 0; // Reset category filter as well
+    this.sortBy = 'dateDesc'; // Reset sorting to default
+    this.applySort();
+  }
+
+  filterAndSortExpenses() {
+    this.expenses = [...this.allExpenses];
+    this.filterByPaymentDate(this.selectedDate.value);
+    this.filterByCategory();
+    this.applySort();
+  }
+
+  filterByPaymentDate(selectedDate: Date | null) {
+    if (!selectedDate) {
+      return;
+    }
+
+    this.expenses = this.expenses.filter(exp => {
+      if (!exp.paymentDate) return false;
+      const expDate = new Date(exp.paymentDate);
+      if (isNaN(expDate.getTime())) return false;
+      return (
+        expDate.getFullYear() === selectedDate.getFullYear() &&
+        expDate.getMonth() === selectedDate.getMonth()
+      );
+    });
+  }
+
+  filterByCategory() {
+    if (this.selectedCategoryId === 0) {
+      return;
+    }
+    this.expenses = this.expenses.filter(expense => expense.categoryId === this.selectedCategoryId);
   }
 
   removeExpenseFromUI(index: number) {
     this.expenses.splice(index, 1);
   }
 
-
   removeExpense(expense: ExpenseModel) {
-    console.log('Removing expense with ID:', expense.id);
-    
     // Assuming you have a delete endpoint in your ExpensesService
     this.expensesService.deleteExpense(expense).subscribe(res => {
-        console.log('Expense removed from server', res);
-        var index = this.expenses.findIndex(e => e.id === expense.id);
-        if (index !== -1) {
-          this.removeExpenseFromUI(index); // Remove from local array after successful deletion
-        }
-      }, error => {
-        console.error('Error removing expense:', error);
-      });
+      var index = this.expenses.findIndex(e => e.id === expense.id);
+      if (index !== -1) {
+        this.removeExpenseFromUI(index); // Remove from local array after successful deletion
+      }
+    }, error => {
+      console.error('Error removing expense:', error);
+    });
   }
 
   enableEdit(exp: ExpenseModel) {
@@ -214,29 +152,25 @@ console.log('Initial expenses:', this.expenses);
     exp.originalExpense = { ...exp };
   }
 
-
   saveExpense(exp: ExpenseModel) {
-    // exp.isloading = true;
     exp.isSaving = true;
-      this.expensesService.updateExpense(exp).subscribe(
-        res => {
-          exp.isEditing = false;
-          exp.isSaving = false;
+    this.expensesService.updateExpense(exp).subscribe(
+      res => {
+        exp.isEditing = false;
+        exp.isSaving = false;
+        exp.originalExpense = undefined;
 
-          exp.originalExpense = undefined;
-
-          this.expenses = res;
-          this.allExpenses = [...res];
-          this.applySort();
-        }, error => {
-          console.log(error);
-          exp.isSaving = false;
-        }
-      );
+        this.expenses = res;
+        this.allExpenses = [...res];
+        this.applySort();
+      }, error => {
+        console.log(error);
+        exp.isSaving = false;
+      }
+    );
   }
 
   restoreExpense(exp: ExpenseModel) {
-
     if (!exp.originalExpense) return;
 
     exp.categoryId = exp.originalExpense.categoryId;
@@ -246,59 +180,44 @@ console.log('Initial expenses:', this.expenses);
     exp.paymentDate = exp.originalExpense.paymentDate;
     exp.merchant = exp.originalExpense.merchant;
     exp.description = exp.originalExpense.description;
-
     exp.isEditing = false;
   }
 
   sortBy: string = 'dateDesc';
 
-applySort() {
-  switch (this.sortBy) {
+  applySort() {
+    switch (this.sortBy) {
+      case 'dateDesc':
+        this.expenses.sort((a, b) =>
+          new Date(b.paymentDate || '').getTime() - new Date(a.paymentDate || '').getTime()
+        );
+        break;
 
-    // case 'dateDesc':
-    //   this.expenses.sort((a, b) =>
-    //     new Date(b.paymentDate).getTime() - new Date(a.paymentDate).getTime()
-    //   );
-    //   break;
+      case 'dateAsc':
+        this.expenses.sort((a, b) =>
+          new Date(a.paymentDate || '').getTime() - new Date(b.paymentDate || '').getTime()
+        );
+        break;
 
-    // case 'dateAsc':
-    //   this.expenses.sort((a, b) =>
-    //     new Date(a.paymentDate).getTime() - new Date(b.paymentDate).getTime()
-    //   );
-    //   break;
+      case 'amountDesc':
+        this.expenses.sort((a, b) => b.amount - a.amount);
+        break;
 
-    case 'dateDesc':
-      this.expenses.sort((a, b) =>
-        new Date(b.paymentDate || '').getTime() - new Date(a.paymentDate || '').getTime()
-      );
-      break;
+      case 'amountAsc':
+        this.expenses.sort((a, b) => a.amount - b.amount);
+        break;
 
-    case 'dateAsc':
-      this.expenses.sort((a, b) =>
-        new Date(a.paymentDate || '').getTime() - new Date(b.paymentDate || '').getTime()
-      );
-      break;
-
-
-    case 'amountDesc':
-      this.expenses.sort((a, b) => b.amount - a.amount);
-      break;
-
-    case 'amountAsc':
-      this.expenses.sort((a, b) => a.amount - b.amount);
-      break;
-
-    case 'merchantAsc':
-      this.expenses.sort((a, b) =>
-        (a.merchant || '').localeCompare(b.merchant || '')
-      );
-      break;
+      case 'merchantAsc':
+        this.expenses.sort((a, b) =>
+          (a.merchant || '').localeCompare(b.merchant || '')
+        );
+        break;
+    }
   }
-}
 
-updateExpenses(expenses: ExpenseModel[]) {
-  this.expenses = expenses;
-  this.allExpenses = [...expenses];
-  this.filterAndSortExpenses();
-}
+  updateExpenses(expenses: ExpenseModel[]) {
+    this.expenses = expenses;
+    this.allExpenses = [...expenses];
+    this.filterAndSortExpenses();
+  }
 }

@@ -1,16 +1,7 @@
-<div
-  class="page-container"
-  [ngClass]="{
+<div class="page-container" [ngClass]="{
     'display-new-section': newSectionIsOpen,
     'hide-new-section': !newSectionIsOpen
-  }" 
->
-<!-- 
-[ngClass]="{
-    'display-new-section': newSectionIsOpen,
-    'hide-new-section': !newSectionIsOpen
-  }" -->
-  <!-- Add/Edit section -->
+  }">
   <div class="new-section" *ngIf="newSectionIsOpen">
 
     <div class="close-section">
@@ -18,39 +9,28 @@
         <i>Click the icon to close the new {{ entityName }} section</i>
       </p>
 
-      <mat-icon
-        class="closed-icon"
-        (click)="toggleSection.emit(false)"
-      >
+      <mat-icon class="closed-icon" (click)="toggleSection.emit(false)">
         close
       </mat-icon>
     </div>
 
     <ng-content select="[new-content]"></ng-content>
-
   </div>
 
   <!-- Closed section -->
   <div class="closed-new-section" *ngIf="!newSectionIsOpen">
-
-    <mat-icon
-      class="closed-icon"
-      (click)="toggleSection.emit(true)"
-    >
+    <mat-icon class="closed-icon" (click)="toggleSection.emit(true)">
       add_circle
     </mat-icon>
 
     <p class="new-expense-text">
       <i>Click the icon to add a new {{ entityName }}</i>
     </p>
-
   </div>
 
   <!-- Main Content -->
   <div>
-
     <div class="topbar">
-
       <div class="title-section">
         <h2>{{ title }}</h2>
         <p>
@@ -58,10 +38,7 @@
         </p>
       </div>
 
-      <!-- <div > -->
-        <ng-content select="[filters]"></ng-content>
-      <!-- </div> -->
-
+      <ng-content select="[filters]"></ng-content>
     </div>
 
     <div *ngIf="isEmpty" class="empty-state">
@@ -72,7 +49,5 @@
     <div *ngIf="!isEmpty" class="expenses-grid">
       <ng-content select="[content]"></ng-content>
     </div>
-
   </div>
-
 </div>

@@ -11,11 +11,11 @@ import { NewBudgetComponent } from './pages/budgets/new-budget/new-budget.compon
 
 const routes: Routes = [
 
-    // APP (cu layout + sidenav)
+  // APP (cu layout + sidenav)
   {
     path: '',
     component: MainLayoutComponent,
-     canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'expenses', component: ExpensesComponent },
@@ -25,32 +25,11 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   },
-  // {
-  //   path: 'auth',
-  //   children: [
-  //     { path: 'login', component: AuthComponent },
-  //     { path: 'register', component: AuthComponent },
-  //   ]
-  // },
-
   {
     path: 'auth',
-   // loadChildren: () => import('src/app/modules/auth/auth.module').then(m => m.AuthModule),
-  loadChildren: () =>
-  import('./pages/auth/auth.module').then(m => m.AuthModule)
-  
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then(m => m.AuthModule)
   },
-  // {
-  //   path: 'dashboard',
-  //   loadChildren: () => import('src/app/modules/dashboard.module').then(m => m.DashboardModule),
-  // },
-  // {
-  //   path: 'dashboard/:email',
-  //   canActivate: [AuthGuard],
-  //   component: DashboardComponent
-  // },
-
-
   // fallback
   { path: '**', redirectTo: 'dashboard' }
 

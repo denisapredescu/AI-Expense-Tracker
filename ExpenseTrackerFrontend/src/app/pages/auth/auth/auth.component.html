@@ -1,5 +1,5 @@
- <div class="whole-page"> <div class="container">
-
+<div class="whole-page">
+  <div class="container">
     <div class="left-panel">
       <h1>Expense Tracker</h1>
       <p>
@@ -9,19 +9,15 @@
     </div>
 
     <div class="right-panel">
-      <!-- <div class="form-container"> -->
+      <div class="tabs">
+        <button type="button" class="tab-btn" [class]="{'active': formType === 'login'}"
+          (click)="showLogin()">Login</button>
+        <button type="button" class="tab-btn" [class]="{'active': formType === 'register'}"
+          (click)="showRegister()">Register</button>
+      </div>
 
-        <div class="tabs">
-          <button type="button"  class="tab-btn" [class]="{'active': formType === 'login'}" (click)="showLogin()">Login</button>
-          <button type="button"  class="tab-btn" [class]="{'active': formType === 'register'}" (click)="showRegister()">Register</button>
-        </div>
-
-        <app-login *ngIf="formType === 'login'" class="form-content"></app-login>
-        <app-register *ngIf="formType === 'register'" class="form-content"></app-register>
-      
-  
-
-      <!-- </div> -->
+      <app-login *ngIf="formType === 'login'" class="form-content"></app-login>
+      <app-register *ngIf="formType === 'register'" class="form-content"></app-register>
     </div>
   </div>
- </div>
+</div>

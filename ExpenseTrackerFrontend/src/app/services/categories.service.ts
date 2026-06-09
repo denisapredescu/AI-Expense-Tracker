@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoriesService {
-public url = "https://localhost:44386/Category";
-    constructor( private http: HttpClient) { }
-  
-    getAll(): Observable<CategoryModel[]> {
-      return this.http.get<CategoryModel[]>(`${this.url}/getAll`);
-    }
+  public url = "https://localhost:44386/Category";
+  constructor(private http: HttpClient) { }
+
+  getAll(): Observable<CategoryModel[]> {
+    return this.http.get<CategoryModel[]>(`${this.url}/getAll`);
+  }
 }

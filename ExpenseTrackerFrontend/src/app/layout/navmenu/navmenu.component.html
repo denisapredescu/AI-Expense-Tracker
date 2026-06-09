@@ -1,68 +1,52 @@
-<!-- <p>navmenu works!</p>
-<mat-nav-list>
-  <a mat-list-item routerLink="/dashboard">Dashboard</a>
-  <a mat-list-item routerLink="/expenses">Expenses</a>
-</mat-nav-list> -->
-
 <div class="sidenav-container " [class.collapsed]="collapsed">
-
-  <!-- 🔷 HEADER -->
-  <div class="logo">
-     <div class="menu-item"> 
-    <mat-icon *ngIf="!collapsed">account_balance_wallet</mat-icon>
-     <label *ngIf="!collapsed" style="font-size: 16px;">Expense  <span style="font-size: 16px; font-weight:bold; color: #b81172;">Tracker</span></label>
- </div>
-    <button class="toggle-btn" (click)="toggle()">
-      <mat-icon>{{ collapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
-    </button>
-  </div>
-
-  <mat-divider></mat-divider>
-
-  <!-- 🔷 MENU -->
-  <nav class="menu" *ngIf="!collapsed">
-
-    <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link">
-        <div class="menu-item"> 
-            <mat-icon>dashboard</mat-icon>
-            <span>Dashboard</span>
+    <div class="logo">
+        <div class="menu-item">
+            <mat-icon *ngIf="!collapsed">account_balance_wallet</mat-icon>
+            <label *ngIf="!collapsed" style="font-size: 16px;">Expense <span
+                    style="font-size: 16px; font-weight:bold; color: #b81172;">Tracker</span></label>
         </div>
-    </a>
+        <button class="toggle-btn" (click)="toggle()">
+            <mat-icon>{{ collapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
+        </button>
+    </div>
 
-    <a mat-list-item routerLink="/expenses" routerLinkActive="active-link"
-  [routerLinkActiveOptions]="{ exact: true }">
-        <div class="menu-item"> 
-            <mat-icon>payments</mat-icon>
-            <span>Expenses</span>
-        </div>
-    </a>
-
-    <!-- <a mat-list-item routerLink="/expenses/new" routerLinkActive="active-link">
-        <div class="menu-item"> 
-            <mat-icon>add</mat-icon>
-            <span>New Expense</span>
-        </div>
-    </a> -->
-
-    <a mat-list-item routerLink="/budgets" routerLinkActive="active-link">
-        <div class="menu-item"> 
-            <mat-icon>account_balance</mat-icon>
-            <span>Budgets</span>
-        </div>
-    </a>
-
-  </nav>
-
-  <!-- 🔴 BOTTOM LOGOUT -->
-  <div class="logout" *ngIf="!collapsed">
     <mat-divider></mat-divider>
 
-    <a mat-list-item (click)="logout()">
-        <div class="menu-item"> 
-            <mat-icon>logout</mat-icon>
-            <span>Logout</span>
-        </div>
-    </a>
-  </div>
+    <!-- 🔷 MENU -->
+    <nav class="menu" *ngIf="!collapsed">
 
+        <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link">
+            <div class="menu-item">
+                <mat-icon>dashboard</mat-icon>
+                <span>Dashboard</span>
+            </div>
+        </a>
+
+        <a mat-list-item routerLink="/expenses" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <div class="menu-item">
+                <mat-icon>payments</mat-icon>
+                <span>Expenses</span>
+            </div>
+        </a>
+
+        <a mat-list-item routerLink="/budgets" routerLinkActive="active-link">
+            <div class="menu-item">
+                <mat-icon>account_balance</mat-icon>
+                <span>Budgets</span>
+            </div>
+        </a>
+    </nav>
+
+    <!-- 🔴 BOTTOM LOGOUT -->
+    <div class="logout" *ngIf="!collapsed">
+        <mat-divider></mat-divider>
+
+        <a mat-list-item (click)="logout()">
+            <div class="menu-item">
+                <mat-icon>logout</mat-icon>
+                <span>Logout</span>
+            </div>
+        </a>
+    </div>
 </div>
