@@ -36,14 +36,26 @@ This repository contains:
 - Current user email shared across frontend components
 - Route guarding on app pages
 
+![Alt text](/readme-images/login-page.gif)
+
+### Dashboard Display
+- Filter data (bugdet and expenses) by month and year
+- Show expenses totals, monthly budget, savings
+- Pie Chart based on the expenses divided on categories
+- Line Chart of expenses by month for the specified year
+- AI Insights
+
+ ![Alt text](/readme-images/dashboard-page.gif) 
+
 ### Expense Management
 - View expenses by user
 - Add and edit expenses
 - Delete expenses
-- Save manualy or a batch of AI-extracted expenses
+- Save manualy one by one or a batch of AI-extracted expenses
 - Filter expenses by month and category
 - Sort expenses
-- Show expenses totals on dashboard
+  
+![Alt text](/readme-images/expenses-page.gif)
 
 ### Budget Management
 - Create monthly budgets
@@ -51,7 +63,8 @@ This repository contains:
 - Delete budgets
 - Filter budgets by month/year
 - Sort budgets
-- Show budget value on dashboard
+
+![Alt text](/readme-images/budgets-page.gif)
 
 ### AI Capabilities
 - Free-form text extraction powered by backend AI service
